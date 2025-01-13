@@ -953,6 +953,7 @@ img
 .contact-section .input-group
 {
     margin: 0 0 25px;
+    padding: 10px;
     border-radius: 30px;
     background-color: var(--black-100);
     box-shadow: var(--shadow-black-100);
@@ -973,7 +974,7 @@ img
 }
 .contact-section .input-group textarea.input-control
 {
-    height: 180px;
+    height: 100%;
     padding-top: 15px;
     resize: none;
 }
