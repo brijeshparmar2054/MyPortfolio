@@ -1046,3 +1046,200 @@ footer .copyright-text {
   margin: 0 auto;
   border-radius: 8px; /* Optional, makes corners rounded */
 }
+#about {
+    padding: 80px 20px;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.about-subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.skills-group {
+    margin-bottom: 35px;
+}
+
+.skills-group h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.skills-group ul {
+    padding-left: 20px;
+}
+
+.skills-group li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.skills-group li span {
+    opacity: 0.7;
+    font-style: italic;
+}
+.skills-group ul {
+    list-style: disc;
+}
+.skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-card li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.skill-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #00bcd4;
+    font-size: 1.3rem;
+}
+
+.skill-card li span {
+    opacity: 0.7;
+    font-style: italic;
+}
+/* Force equal card height */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px; /* Adjust as needed */
+}
+
+/* Collapsed list */
+.skill-list {
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+/* Limit visible content */
+.skill-list.collapsed {
+    max-height: 170px; /* Controls visible items */
+}
+
+/* Read more button */
+.read-more-btn {
+    margin-top: 12px;
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #00bcd4;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+.skill-list {
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+/* Collapsed height */
+.skill-list.collapsed {
+    max-height: 160px;
+}
+
+/* Fade overlay */
+.skill-list.collapsed::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        #ffffff
+    );
+    pointer-events: none;
+}
+/* Desktop */
+.skill-card {
+    height: 420px;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .skill-card {
+        height: 380px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .skill-card {
+        height: auto; /* natural height */
+    }
+
+    .skill-list.collapsed {
+        max-height: 140px;
+    }
+}
+.read-more-btn {
+    margin-top: auto;
+    background: none;
+    border: none;
+    color: #00bcd4;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+}
+
+.read-more-btn .arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+/* Expanded */
+.read-more-btn.expanded .arrow {
+    transform: rotate(180deg);
+}

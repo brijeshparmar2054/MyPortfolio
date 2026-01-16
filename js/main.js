@@ -1,159 +1,185 @@
-       /*===== Resize Navbar on Scroll =====*/
-       var navbar = document.querySelector(".navbar");
-       // when the scroll is higher than 20 viewport height, add the sticky classs to the tag with a class navbar 
-       window.onscroll = () =>{
-       this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-     }
-      /*===== Nav Toggler =====*/
-      const navMenu = document.querySelector(".menu");
-      navToggle = document.querySelector(".menu-btn");
-      if(navToggle)
-      {
-          navToggle.addEventListener("click", () =>
-          {
-              navMenu.classList.toggle("active");
-          })
-      }
-      // closing menu when link is clicked
-      const navLink = document.querySelectorAll(".nav-link");
-      function linkAction()
-      {
-          const navMenu = document.querySelector(".menu");
-          navMenu.classList.remove("active")
-      }
-      navLink.forEach(n => n.addEventListener("click", linkAction))
-      /*===== Scroll Section Active Link =====*/
+"use strict";
 
-      const Section=document.querySelectorAll('section[id]')
-      function scrollActive()
-      {
-          const scrollY = window.pageYOffset
-          Section.forEach(current => {
-              const sectionHeight = current.offsetHeight
-              const sectionTop = current.offsetTop - 50;
-              sectionId = current.getAttribute('id')
-              if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
-              {
-                  document.querySelector('.links a[href*=' + sectionId + ']').classList.add('active')
-              }
-              else
-              {
-                document.querySelector('.links a[href*=' + sectionId + ']').classList.remove('active')
-              }
-          })
-      }
-      window.addEventListener('scroll', scrollActive)
-      /*===== Skills Animation =====*/
-      const skills_wrap = document.querySelector(".about-skills"),
-      skills_bar = document.querySelectorAll(".progress-line");
-      window.addEventListener("scroll", () => {
-          skillsEffect();
-      })
-      // every time we scroll checking, we exceeded the about-skills or not
-      function checkScroll(el)
-      {
-          //getting the top position of about-skills relative to view port, in other words we need to get
-          // amount of pixels between about-skills and the top edge of the window.
-          let rect = el.getBoundingClientRect();
-          // after knowing the amount of pixels between the top edge of about skills and the top edge of window
-          // now we will check we exceeded the bottom edge of about skills or not
-          if(window.innerHeight >= rect.top + el.offsetHeight) return true;
-          return false;
-      }
-      function skillsEffect()
-      {
-          if(!checkScroll(skills_wrap)) return;
-          skills_bar.forEach((skill) => (skill.style.width = skill.dataset.progress));
-      }
-      /*===== Portfolio Item Filter =====*/
-      const FilterContainer = document.querySelector(".portfolio-filter"),
-            filterBtns = FilterContainer.children;
-            totalFilterBtn = filterBtns.length;
-            PortfolioItems = document.querySelectorAll(".portfolio-item"),
-            totalportfolioItem = PortfolioItems.length;
-            for(let i=0; i < totalFilterBtn; i++)
-            {
-                filterBtns[i].addEventListener("click", function()
-                {
-                    FilterContainer.querySelector(".active").classList.remove("active");
-                    this.classList.add("active");
-                    const filterValue = this.getAttribute("data-filter")
-                    for( let k=0; k<totalportfolioItem; k++)
-                    {
-                        if(filterValue === PortfolioItems[k].getAttribute("data-category"))
-                        {
-                            PortfolioItems[k].classList.remove("hide");
-                            PortfolioItems[k].classList.add("show");
-                        }
-                        else
-                        {
-                            PortfolioItems[k].classList.remove("show");
-                            PortfolioItems[k].classList.add("hide");
-                        }
-                        if(filterValue === "all")
-                        {
-                            PortfolioItems[k].classList.remove("hide");
-                            PortfolioItems[k].classList.add("show");
-                        }
-                    }
-                })
-            }
-        /*===== Lightbox =====*/
-        const lightbox = document.querySelector(".lightbox"),
-                  lightboxImg = lightbox.querySelector(".lightbox-img"),
-                  lightboxClose = lightbox.querySelector(".lightbox-close"),
-                  lightboxText = lightbox.querySelector(".caption-text"),
-                  lightboxCounter = lightbox.querySelector(".caption-counter");
-                  let itemIndex = 0;
-                  for(let i=0; i<totalportfolioItem; i++)
-                  {
-                     PortfolioItems[i].addEventListener("click", function()
-                     {
-                         itemIndex=i;
-                         changeItem();
-                         toggleLightbox();
-                     })
-                  }
-                  function nextItem()
-                  {
-                      if(itemIndex == totalportfolioItem-1)
-                      {
-                          itemIndex=0;
-                      }
-                      else
-                      {
-                          itemIndex++
-                      }
-                      changeItem();
-                  }
-                  function prevItem()
-                  {
-                      if(itemIndex == 0)
-                      {
-                          itemIndex=totalportfolioItem-1;
-                      }
-                      else
-                      {
-                          itemIndex--
-                      }
-                      changeItem();
-                  }
-                  function toggleLightbox()
-                  {
-                      lightbox.classList.toggle("open");
-                  }
-                  function changeItem()
-                  {
-                      imgSrc = PortfolioItems[itemIndex].querySelector(".portfolio-img img").getAttribute("src");
-                      lightboxImg.src=imgSrc;
-                      lightboxText.innerHTML=PortfolioItems[itemIndex].querySelector("h4").innerHTML;
-                      lightboxCounter.innerHTML=(itemIndex+1) + " of " + totalportfolioItem;
-                  }
-                  // close lightbox
-                  lightbox.addEventListener("click",function(event)
-                  {
-                     if(event.target === lightboxClose || event.target === lightbox)
-                     {
-                        toggleLightbox()
-                     }
-                  })
+/* =======================
+   Navbar Resize on Scroll
+======================= */
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  navbar?.classList.toggle("sticky", window.scrollY > 20);
+});
+
+/* =======================
+   Nav Toggler
+======================= */
+const navMenu = document.querySelector(".menu");
+const navToggle = document.querySelector(".menu-btn");
+
+navToggle?.addEventListener("click", () => {
+  navMenu?.classList.toggle("active");
+});
+
+// Close menu on link click
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu?.classList.remove("active");
+  });
+});
+
+/* =======================
+   Scroll Section Active Link
+======================= */
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".links a");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const height = section.offsetHeight;
+    const top = section.offsetTop - 50;
+    const id = section.id;
+
+    navLinks.forEach(link => {
+      link.classList.toggle(
+        "active",
+        scrollY > top && scrollY <= top + height && link.href.includes(id)
+      );
+    });
+  });
+}
+
+/* =======================
+   Skills Animation
+======================= */
+const skillsWrap = document.querySelector(".about-skills");
+const skillBars = document.querySelectorAll(".progress-line");
+
+function skillsEffect() {
+  if (!skillsWrap) return;
+
+  const rect = skillsWrap.getBoundingClientRect();
+  const isVisible = window.innerHeight >= rect.top + skillsWrap.offsetHeight;
+
+  if (isVisible) {
+    skillBars.forEach(bar => {
+      bar.style.width = bar.dataset.progress;
+    });
+  }
+}
+
+/* =======================
+   Scroll Listener (Combined)
+======================= */
+window.addEventListener("scroll", () => {
+  scrollActive();
+  skillsEffect();
+});
+
+/* =======================
+   Portfolio Filter
+======================= */
+const filterContainer = document.querySelector(".portfolio-filter");
+const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+filterContainer?.addEventListener("click", e => {
+  const btn = e.target.closest("[data-filter]");
+  if (!btn) return;
+
+  filterContainer.querySelector(".active")?.classList.remove("active");
+  btn.classList.add("active");
+
+  const filter = btn.dataset.filter;
+
+  portfolioItems.forEach(item => {
+    const match = filter === "all" || item.dataset.category === filter;
+    item.classList.toggle("show", match);
+    item.classList.toggle("hide", !match);
+  });
+});
+
+/* =======================
+   Lightbox
+======================= */
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = lightbox?.querySelector(".lightbox-img");
+const lightboxText = lightbox?.querySelector(".caption-text");
+const lightboxCounter = lightbox?.querySelector(".caption-counter");
+const lightboxClose = lightbox?.querySelector(".lightbox-close");
+
+let itemIndex = 0;
+
+portfolioItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    itemIndex = index;
+    updateLightbox();
+    toggleLightbox(true);
+  });
+});
+
+function updateLightbox() {
+  const item = portfolioItems[itemIndex];
+  lightboxImg.src = item.querySelector("img").src;
+  lightboxText.textContent = item.querySelector("h4").textContent;
+  lightboxCounter.textContent = `${itemIndex + 1} of ${portfolioItems.length}`;
+}
+
+function toggleLightbox(open) {
+  lightbox?.classList.toggle("open", open);
+}
+
+function nextItem() {
+  itemIndex = (itemIndex + 1) % portfolioItems.length;
+  updateLightbox();
+}
+
+function prevItem() {
+  itemIndex =
+    (itemIndex - 1 + portfolioItems.length) % portfolioItems.length;
+  updateLightbox();
+}
+
+lightbox?.addEventListener("click", e => {
+  if (e.target === lightbox || e.target === lightboxClose) {
+    toggleLightbox(false);
+  }
+});
+
+/* =======================
+   Skill Cards Read More
+======================= */
+const COLLAPSED_HEIGHT = 160;
+
+document.querySelectorAll(".skill-card").forEach(card => {
+  const list = card.querySelector(".skill-list");
+  const button = card.querySelector(".read-more-btn");
+
+  if (!list || !button) return;
+
+  // Measure height
+  list.classList.remove("collapsed");
+  const fullHeight = list.scrollHeight;
+  list.classList.add("collapsed");
+
+  if (fullHeight > COLLAPSED_HEIGHT) {
+    button.style.display = "inline";
+    button.setAttribute("aria-expanded", "false");
+  }
+
+  const toggle = () => {
+    const expanded = !list.classList.toggle("collapsed");
+    button.classList.toggle("expanded", expanded);
+    button.setAttribute("aria-expanded", expanded);
+    button.innerHTML = expanded
+      ? 'Read Less <span class="arrow">▼</span>'
+      : 'Read More <span class="arrow">▼</span>';
+  };
+
+  button.addEventListener("click", toggle);
+  button.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggle();
+    }
+  });
+});
