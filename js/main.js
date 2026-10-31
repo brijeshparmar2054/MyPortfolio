@@ -1,185 +1,585 @@
 "use strict";
 
-/* =======================
-   Navbar Resize on Scroll
-======================= */
-const navbar = document.querySelector(".navbar");
+document.addEventListener("DOMContentLoaded", () => {
+  // ============================================================
+  // 0. Prefers Reduced Motion Check
+  // ============================================================
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-window.addEventListener("scroll", () => {
-  navbar?.classList.toggle("sticky", window.scrollY > 20);
-});
+  // ============================================================
+  // 1. Navbar Scroll Effect
+  // ============================================================
+  const navbar = document.querySelector(".navbar");
+  let scrollTicking = false;
 
-/* =======================
-   Nav Toggler
-======================= */
-const navMenu = document.querySelector(".menu");
-const navToggle = document.querySelector(".menu-btn");
-
-navToggle?.addEventListener("click", () => {
-  navMenu?.classList.toggle("active");
-});
-
-// Close menu on link click
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu?.classList.remove("active");
-  });
-});
-
-/* =======================
-   Scroll Section Active Link
-======================= */
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".links a");
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach(section => {
-    const height = section.offsetHeight;
-    const top = section.offsetTop - 50;
-    const id = section.id;
-
-    navLinks.forEach(link => {
-      link.classList.toggle(
-        "active",
-        scrollY > top && scrollY <= top + height && link.href.includes(id)
-      );
-    });
-  });
-}
-
-/* =======================
-   Skills Animation
-======================= */
-const skillsWrap = document.querySelector(".about-skills");
-const skillBars = document.querySelectorAll(".progress-line");
-
-function skillsEffect() {
-  if (!skillsWrap) return;
-
-  const rect = skillsWrap.getBoundingClientRect();
-  const isVisible = window.innerHeight >= rect.top + skillsWrap.offsetHeight;
-
-  if (isVisible) {
-    skillBars.forEach(bar => {
-      bar.style.width = bar.dataset.progress;
-    });
-  }
-}
-
-/* =======================
-   Scroll Listener (Combined)
-======================= */
-window.addEventListener("scroll", () => {
-  scrollActive();
-  skillsEffect();
-});
-
-/* =======================
-   Portfolio Filter
-======================= */
-const filterContainer = document.querySelector(".portfolio-filter");
-const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-filterContainer?.addEventListener("click", e => {
-  const btn = e.target.closest("[data-filter]");
-  if (!btn) return;
-
-  filterContainer.querySelector(".active")?.classList.remove("active");
-  btn.classList.add("active");
-
-  const filter = btn.dataset.filter;
-
-  portfolioItems.forEach(item => {
-    const match = filter === "all" || item.dataset.category === filter;
-    item.classList.toggle("show", match);
-    item.classList.toggle("hide", !match);
-  });
-});
-
-/* =======================
-   Lightbox
-======================= */
-const lightbox = document.querySelector(".lightbox");
-const lightboxImg = lightbox?.querySelector(".lightbox-img");
-const lightboxText = lightbox?.querySelector(".caption-text");
-const lightboxCounter = lightbox?.querySelector(".caption-counter");
-const lightboxClose = lightbox?.querySelector(".lightbox-close");
-
-let itemIndex = 0;
-
-portfolioItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    itemIndex = index;
-    updateLightbox();
-    toggleLightbox(true);
-  });
-});
-
-function updateLightbox() {
-  const item = portfolioItems[itemIndex];
-  lightboxImg.src = item.querySelector("img").src;
-  lightboxText.textContent = item.querySelector("h4").textContent;
-  lightboxCounter.textContent = `${itemIndex + 1} of ${portfolioItems.length}`;
-}
-
-function toggleLightbox(open) {
-  lightbox?.classList.toggle("open", open);
-}
-
-function nextItem() {
-  itemIndex = (itemIndex + 1) % portfolioItems.length;
-  updateLightbox();
-}
-
-function prevItem() {
-  itemIndex =
-    (itemIndex - 1 + portfolioItems.length) % portfolioItems.length;
-  updateLightbox();
-}
-
-lightbox?.addEventListener("click", e => {
-  if (e.target === lightbox || e.target === lightboxClose) {
-    toggleLightbox(false);
-  }
-});
-
-/* =======================
-   Skill Cards Read More
-======================= */
-const COLLAPSED_HEIGHT = 160;
-
-document.querySelectorAll(".skill-card").forEach(card => {
-  const list = card.querySelector(".skill-list");
-  const button = card.querySelector(".read-more-btn");
-
-  if (!list || !button) return;
-
-  // Measure height
-  list.classList.remove("collapsed");
-  const fullHeight = list.scrollHeight;
-  list.classList.add("collapsed");
-
-  if (fullHeight > COLLAPSED_HEIGHT) {
-    button.style.display = "inline";
-    button.setAttribute("aria-expanded", "false");
+  function onScroll() {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        handleNavbarScroll();
+        handleActiveSectionHighlight();
+        handleBackToTopVisibility();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
   }
 
-  const toggle = () => {
-    const expanded = !list.classList.toggle("collapsed");
-    button.classList.toggle("expanded", expanded);
-    button.setAttribute("aria-expanded", expanded);
-    button.innerHTML = expanded
-      ? 'Read Less <span class="arrow">▼</span>'
-      : 'Read More <span class="arrow">▼</span>';
-  };
+  function handleNavbarScroll() {
+    if (!navbar) return;
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
 
-  button.addEventListener("click", toggle);
-  button.addEventListener("keydown", e => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      toggle();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // ============================================================
+  // 2. Mobile Menu Toggle
+  // ============================================================
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navLinkItems = document.querySelectorAll(".nav-link");
+
+  function openMobileMenu() {
+    navLinks?.classList.add("active");
+    navToggle?.classList.add("active");
+    navToggle?.setAttribute("aria-expanded", "true");
+    trapFocusInMenu();
+  }
+
+  function closeMobileMenu() {
+    navLinks?.classList.remove("active");
+    navToggle?.classList.remove("active");
+    navToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  function isMobileMenuOpen() {
+    return navLinks?.classList.contains("active") ?? false;
+  }
+
+  navToggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (isMobileMenuOpen()) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
     }
   });
+
+  // Close when a nav link is clicked
+  navLinkItems.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      isMobileMenuOpen() &&
+      !navLinks?.contains(e.target) &&
+      !navToggle?.contains(e.target)
+    ) {
+      closeMobileMenu();
+    }
+  });
+
+  // ============================================================
+  // 3. Smooth Scroll for Anchor Links
+  // ============================================================
+  const NAVBAR_HEIGHT = 80;
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const targetId = anchor.getAttribute("href");
+      if (!targetId || targetId === "#") return;
+
+      const targetEl = document.querySelector(targetId);
+      if (!targetEl) return;
+
+      e.preventDefault();
+      const targetPosition =
+        targetEl.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // ============================================================
+  // 4. Active Section Highlighting
+  // ============================================================
+  const sections = document.querySelectorAll("section[id]");
+
+  function handleActiveSectionHighlight() {
+    if (!sections.length) return;
+
+    const scrollPos = window.scrollY + NAVBAR_HEIGHT + 100;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        navLinkItems.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }
+
+  // ============================================================
+  // 5. Scroll Reveal Animations (IntersectionObserver)
+  // ============================================================
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  }
+
+  // ============================================================
+  // 6. Project Filter
+  // ============================================================
+  const filterContainer = document.querySelector(".project-filters");
+  const filterButtons = document.querySelectorAll(
+    ".project-filters .filter-btn"
+  );
+  const projectCards = document.querySelectorAll(".project-card-small");
+
+  filterContainer?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter-btn");
+    if (!btn) return;
+
+    const filter = btn.dataset.filter;
+
+    // Update active button
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    // Filter cards
+    projectCards.forEach((card) => {
+      const category = card.dataset.category;
+      const shouldShow = filter === "all" || category === filter;
+
+      if (shouldShow) {
+        card.style.display = "";
+        // Trigger reflow for animation
+        void card.offsetWidth;
+        card.style.opacity = "1";
+        card.style.transform = "scale(1) translateY(0)";
+      } else {
+        card.style.opacity = "0";
+        card.style.transform = "scale(0.95) translateY(20px)";
+        // Hide after transition
+        setTimeout(() => {
+          if (
+            card.style.opacity === "0" &&
+            (filter === "all" || card.dataset.category !== filter)
+          ) {
+            card.style.display = "none";
+          }
+        }, 350);
+      }
+    });
+  });
+
+  // ============================================================
+  // 7. Contact Form Validation & Submission
+  // ============================================================
+  const contactForm = document.querySelector('form[name="contact"]');
+  let isSubmitting = false;
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function showFieldError(field, message) {
+    const formGroup = field.closest(".form-group");
+    if (!formGroup) return;
+    formGroup.classList.add("error");
+    let errorEl = formGroup.querySelector(".error-message");
+    if (!errorEl) {
+      errorEl = document.createElement("span");
+      errorEl.className = "error-message";
+      formGroup.appendChild(errorEl);
+    }
+    errorEl.textContent = message;
+  }
+
+  function clearFieldError(field) {
+    const formGroup = field.closest(".form-group");
+    if (!formGroup) return;
+    formGroup.classList.remove("error");
+    const errorEl = formGroup.querySelector(".error-message");
+    if (errorEl) errorEl.textContent = "";
+  }
+
+  function showFormMessage(type, message) {
+    if (!contactForm) return;
+    let msgEl = contactForm.querySelector(".form-status-message");
+    if (!msgEl) {
+      msgEl = document.createElement("div");
+      msgEl.className = "form-status-message";
+      contactForm.appendChild(msgEl);
+    }
+    msgEl.className = `form-status-message ${type}`;
+    msgEl.textContent = message;
+    msgEl.style.display = "block";
+
+    if (type === "success") {
+      setTimeout(() => {
+        msgEl.style.display = "none";
+      }, 5000);
+    }
+  }
+
+  contactForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+
+    // Clear all previous errors
+    contactForm.querySelectorAll(".form-group").forEach((g) => {
+      g.classList.remove("error");
+      const errMsg = g.querySelector(".error-message");
+      if (errMsg) errMsg.textContent = "";
+    });
+
+    const name = contactForm.querySelector('[name="name"]');
+    const email = contactForm.querySelector('[name="email"]');
+    const subject = contactForm.querySelector('[name="subject"]');
+    const message = contactForm.querySelector('[name="message"]');
+
+    let isValid = true;
+
+    if (name && !name.value.trim()) {
+      showFieldError(name, "Name is required.");
+      isValid = false;
+    } else if (name) {
+      clearFieldError(name);
+    }
+
+    if (email && !email.value.trim()) {
+      showFieldError(email, "Email is required.");
+      isValid = false;
+    } else if (email && !validateEmail(email.value.trim())) {
+      showFieldError(email, "Please enter a valid email address.");
+      isValid = false;
+    } else if (email) {
+      clearFieldError(email);
+    }
+
+    if (subject && !subject.value.trim()) {
+      showFieldError(subject, "Subject is required.");
+      isValid = false;
+    } else if (subject) {
+      clearFieldError(subject);
+    }
+
+    if (message && !message.value.trim()) {
+      showFieldError(message, "Message is required.");
+      isValid = false;
+    } else if (message) {
+      clearFieldError(message);
+    }
+
+    if (!isValid) return;
+
+    // Submit via fetch (Netlify form handling)
+    isSubmitting = true;
+    const submitBtn = contactForm.querySelector('[type="submit"]');
+    const originalBtnText = submitBtn?.textContent ?? "Send";
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (response.ok) {
+        showFormMessage("success", "Message sent successfully! I'll get back to you soon.");
+        contactForm.reset();
+      } else {
+        showFormMessage("error", "Something went wrong. Please try again later.");
+      }
+    } catch {
+      showFormMessage("error", "Network error. Please check your connection and try again.");
+    } finally {
+      isSubmitting = false;
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
+  });
+
+  // Live clear errors on input
+  contactForm?.querySelectorAll("input, textarea").forEach((field) => {
+    field.addEventListener("input", () => clearFieldError(field));
+  });
+
+  // ============================================================
+  // 8. Typing Effect for Hero
+  // ============================================================
+  const heroTypingEl = document.querySelector(".hero-typing-text");
+
+  if (heroTypingEl && !prefersReducedMotion) {
+    const words = [
+      "Game Worlds",
+      "Interactive Experiences",
+      "Immersive Gameplay",
+      "Mobile Adventures",
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let lastTimestamp = 0;
+
+    const TYPE_SPEED = 80;
+    const DELETE_SPEED = 45;
+    const PAUSE_AFTER_WORD = 2000;
+    const PAUSE_BEFORE_TYPE = 400;
+
+    function typeEffect(timestamp) {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const elapsed = timestamp - lastTimestamp;
+
+      const currentWord = words[wordIndex];
+      let delay;
+
+      if (!isDeleting) {
+        // Typing
+        delay = TYPE_SPEED;
+        if (elapsed >= delay) {
+          charIndex++;
+          heroTypingEl.textContent = currentWord.substring(0, charIndex);
+          lastTimestamp = timestamp;
+
+          if (charIndex === currentWord.length) {
+            // Pause then start deleting
+            isDeleting = true;
+            lastTimestamp = timestamp + PAUSE_AFTER_WORD - DELETE_SPEED;
+          }
+        }
+      } else {
+        // Deleting
+        delay = DELETE_SPEED;
+        if (elapsed >= delay) {
+          charIndex--;
+          heroTypingEl.textContent = currentWord.substring(0, charIndex);
+          lastTimestamp = timestamp;
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            lastTimestamp = timestamp + PAUSE_BEFORE_TYPE - TYPE_SPEED;
+          }
+        }
+      }
+
+      requestAnimationFrame(typeEffect);
+    }
+
+    requestAnimationFrame(typeEffect);
+  } else if (heroTypingEl && prefersReducedMotion) {
+    // Just show the first word statically
+    heroTypingEl.textContent = "Game Worlds";
+  }
+
+  // ============================================================
+  // 9. Stats Counter Animation
+  // ============================================================
+  const statNumbers = document.querySelectorAll(".stat-number");
+
+  if (statNumbers.length > 0) {
+    const COUNTER_DURATION = 2000; // ms
+
+    function easeOutQuad(t) {
+      return t * (2 - t);
+    }
+
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      if (isNaN(target)) return;
+
+      const start = performance.now();
+
+      function updateCounter(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / COUNTER_DURATION, 1);
+        const easedProgress = easeOutQuad(progress);
+        const current = Math.round(easedProgress * target);
+
+        el.textContent = current;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          el.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+
+    const statsObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    statNumbers.forEach((el) => statsObserver.observe(el));
+  }
+
+  // ============================================================
+  // 10. Parallax / Mouse Move Effect (Desktop Only)
+  // ============================================================
+  const heroSection = document.querySelector(".hero");
+  const heroVisuals = document.querySelectorAll(".hero-visual");
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+  if (
+    heroSection &&
+    heroVisuals.length > 0 &&
+    isDesktop &&
+    !prefersReducedMotion
+  ) {
+    heroSection.addEventListener("mousemove", (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      heroVisuals.forEach((el, index) => {
+        const depth = (index + 1) * 8;
+        const moveX = x * depth;
+        const moveY = y * depth;
+        el.style.willChange = "transform";
+        el.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+
+    heroSection.addEventListener("mouseleave", () => {
+      heroVisuals.forEach((el) => {
+        el.style.willChange = "auto";
+        el.style.transform = "translate(0, 0)";
+      });
+    });
+  }
+
+  // ============================================================
+  // 11. Back to Top Button
+  // ============================================================
+  const backToTopBtn = document.querySelector(".back-to-top");
+
+  function handleBackToTopVisibility() {
+    if (!backToTopBtn) return;
+    if (window.scrollY > 500) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+  }
+
+  backToTopBtn?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ============================================================
+  // 13. Keyboard Accessibility
+  // ============================================================
+  document.addEventListener("keydown", (e) => {
+    // Escape closes mobile menu
+    if (e.key === "Escape" && isMobileMenuOpen()) {
+      closeMobileMenu();
+      navToggle?.focus();
+    }
+  });
+
+  // Focus trap in mobile menu
+  function trapFocusInMenu() {
+    if (!navLinks) return;
+
+    const focusableEls = navLinks.querySelectorAll(
+      'a, button, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableEls.length === 0) return;
+
+    const firstFocusable = focusableEls[0];
+    const lastFocusable = focusableEls[focusableEls.length - 1];
+
+    function handleTabTrap(e) {
+      if (e.key !== "Tab" || !isMobileMenuOpen()) {
+        return;
+      }
+
+      if (e.shiftKey) {
+        // Shift + Tab
+        if (document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable.focus();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable.focus();
+        }
+      }
+    }
+
+    // Remove previous handler if any
+    navLinks._tabTrapHandler && document.removeEventListener("keydown", navLinks._tabTrapHandler);
+    navLinks._tabTrapHandler = handleTabTrap;
+    document.addEventListener("keydown", handleTabTrap);
+
+    firstFocusable.focus();
+  }
+
+  // ============================================================
+  // 14. Current Year
+  // ============================================================
+  const yearEl = document.querySelector(".current-year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // ============================================================
+  // Initial Calls
+  // ============================================================
+  handleNavbarScroll();
+  handleActiveSectionHighlight();
+  handleBackToTopVisibility();
 });

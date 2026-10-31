@@ -5,18 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brijesh Parmar - Unity Game Developer</title>
-    <!--===== Font Awesome =====-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!--===== Main CSS =====-->
+    <title>Brijesh Parmar — Unity Game Developer | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Brijesh Parmar — an experienced Unity Game Developer with 2.75+ years building 2D &amp; 3D mobile games. Gameplay systems, AI, optimization, and published titles on Google Play Store.">
+    <meta name="keywords"
+        content="Unity Game Developer, Game Developer Portfolio, Unity C#, Mobile Game Developer, Brijesh Parmar, 2D 3D Games">
+    <meta name="author" content="Brijesh Parmar">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Brijesh Parmar — Unity Game Developer">
+    <meta property="og:description"
+        content="Experienced Unity Game Developer specializing in 2D & 3D mobile games, gameplay systems, AI, and performance optimization.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brijesh-parmar-unity-game-developer.netlify.app/">
+    <meta property="og:image" content="images/hero.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brijesh Parmar — Unity Game Developer">
+    <meta name="twitter:description"
+        content="Experienced Unity Game Developer specializing in 2D & 3D mobile games, gameplay systems, AI, and performance optimization.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D8TP3FELF"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-4D8TP3FELF');
     </script>
 </head>
@@ -25,704 +53,926 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVLCQ4ZT" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!--===== Navbar Start =====-->
-    <nav class="navbar">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <div class="row justify-content-between">
-                <div class="logo"><a href="index.html">Brijesh Parmar - <span>Unity Game Developer</span></a></div>
-                <div class="links">
-                    <ul class="menu">
-                        <li class="nav-item"><a href="#home" class="nav-link active">Home <span></span></a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">About <span></span></a></li>
-                        <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio <span></span></a></li>
-                        <li class="nav-item"><a href="#playstore" class="nav-link">Play Store <span></span></a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact <span></span></a></li>
-                    </ul>
-                </div>
-                <div class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-mark">BP</span>
+                <span class="nav-logo-text">Brijesh Parmar</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="resume/BRIJESH_GAME.pdf" target="_blank" class="nav-cta">Resume</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
-    <!--===== Navbar End =====-->
-    <!--===== Home Section Start =====-->
-    <section class="home-section" id="home">
-        <ul class="header-social"> <!--===== Header Social =====-->
-            <li><a href="https://www.facebook.com/profile.php?id=100066251478447"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/_.brijesh._.6969._/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/brijesh-parmar-258541248/"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="home-text">
-                    <h4>Hi, I'm</h4>
-                    <h1>Brijesh Parmar</h1>
-                    <span>Unity Game Developer</span>
-                    <p>Unity Game Developer who turns coffee into code and bugs into features. Experienced in building 
-                        2D & 3D games where reliable physics-based gameplay systems, animations don’t break (eventually), and 
-                        FPS stays above “slide-show mode.” Passionate about creating fun, optimized, and playable 
-                        experiences—because games should crash players, not devices.</p>
-                    <a href="resume/BRIJESH_GAME.pdf" class="btn btn-1" target="_blank">Resume</a>
 
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="hero-badge">UNITY GAME DEVELOPER</span>
+                <h1 class="hero-title">
+                    I Build <span class="highlight">Worlds</span>.<br>
+                    You <span class="highlight">Play</span> Them.
+                </h1>
+                <p class="hero-description">
+                    Experienced Unity developer with 2.75+ years turning ideas into polished, playable mobile games —
+                    from gameplay systems and AI to optimization and publishing on the Play Store.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">
+                        <i class="fas fa-gamepad"></i> Explore My Projects
+                    </a>
+                    <a href="resume/BRIJESH_GAME.pdf" target="_blank" class="btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
                 </div>
-                <div class="home-image">
-                    <div class="img-box">
-                        <img src="images/hero.png" alt="">
+            </div>
+            <div class="hero-visual reveal">
+                <div class="hero-image-wrapper">
+                    <img src="images/hero.png" alt="Brijesh Parmar — Unity Game Developer" width="500" height="500">
+                </div>
+                <div class="hero-float-card hero-float-1">
+                    <i class="fab fa-unity"></i>
+                    <span>Unity Engine</span>
+                </div>
+                <div class="hero-float-card hero-float-2">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Mobile Games</span>
+                </div>
+                <div class="hero-float-card hero-float-3">
+                    <i class="fas fa-code"></i>
+                    <span>C# Developer</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Crafting Games That Players <span class="highlight">Love</span></h2>
+                    <p>
+                        I'm a Unity Game Developer with <strong>2.75+ years of professional experience</strong> building
+                        2D and 3D mobile games from concept to Play Store release. I specialize in designing robust
+                        gameplay systems,
+                        implementing intelligent AI behaviors, and optimizing performance to deliver smooth 50–60 FPS
+                        experiences
+                        — even on low-end Android devices.
+                    </p>
+                    <p>
+                        From wave-based survival games to idle business simulations and horror escape titles, I've
+                        worked across
+                        multiple genres, mastering the art of creating engaging player experiences. I'm passionate about
+                        clean architecture,
+                        modular code, and solving the complex technical challenges that make games feel polished and fun
+                        to play.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item reveal">
+                            <span class="stat-number" data-target="2">0</span><span class="stat-suffix">.75+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item reveal">
+                            <span class="stat-number" data-target="18">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Games Built</span>
+                        </div>
+                        <div class="stat-item reveal">
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label">Published Titles</span>
+                        </div>
+                        <div class="stat-item reveal">
+                            <span class="stat-number" data-target="2">0</span>
+                            <span class="stat-label">Companies</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-side reveal">
+                    <div class="about-image-wrapper">
+                        <img src="images/about_hero.png" alt="Brijesh Parmar" width="400" height="400">
+                        <div class="about-image-glow"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header-hero-shape"></div> <!--===== Hero Shape =====-->
     </section>
-    <!--===== Home Section End =====-->
-    <!--===== About Section Start =====-->
-    <section id="about">
-        <div class="about-container">
-            <h2>🛠 Technical Skills</h2>
-            <p class="about-subtitle">(a.k.a. My Weapon Inventory)</p>
 
-            <div class="skills-cards">
-
-                <div class="skill-card">
-                    <h3>🎮 Game Development</h3>
-
-                    <ul class="skill-list collapsed">
-                        <li>Unity 2D & 3D <span>(Yes, both buttons work)</span></li>
-                        <li>Gameplay Mechanics & Player Controls</li>
-                        <li>Physics System <span>(Rigidbodies that actually fall)</span></li>
-                        <li>Animator Controller <span>(State machines that don’t rage quit)</span></li>
-                        <li>UI Systems <span>(Buttons that actually click)</span></li>
-                        <li>Input System <span>(Old, New, and “Why isn’t this working?”)</span></li>
-                        <li>Object Pooling <span>(Because Instantiate is expensive)</span></li>
-                        <li>Scriptable Objects <span>(Data without drama)</span></li>
-                    </ul>
-
-                    <button class="read-more-btn" aria-expanded="false">
-                        Read More <span class="arrow">▼</span>
-                    </button>
-
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Technical Arsenal</span>
+                <h2 class="section-title">Skills & <span class="highlight">Technologies</span></h2>
+                <p class="section-subtitle">The tools and technologies I use to bring game ideas to life.</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Game Development -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="skill-category-title">Game Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity 2D/3D</span>
+                        <span class="skill-tag">Gameplay Mechanics</span>
+                        <span class="skill-tag">Game Systems</span>
+                        <span class="skill-tag">Scriptable Objects</span>
+                        <span class="skill-tag">Player Controllers</span>
+                        <span class="skill-tag">Physics Systems</span>
+                        <span class="skill-tag">Animation Systems</span>
+                        <span class="skill-tag">State Machines</span>
+                        <span class="skill-tag">NavMesh &amp; AI Logic</span>
+                        <span class="skill-tag">Object Pooling</span>
+                    </div>
                 </div>
 
-
-                <div class="skill-card">
-                    <h3>💻 Programming</h3>
-                    <ul class="skill-list collapsed">
-                        <li>C# <span>(My main spell)</span></li>
-                        <li>OOP <span>(Because spaghetti belongs in kitchens)</span></li>
-                        <li>Design Patterns <span>(Singletons everywhere… responsibly)</span></li>
-                        <li>C++, Java <span>(I remember them… mostly)</span></li>
-                    </ul>
-                    <button class="read-more-btn" aria-expanded="false">
-                        Read More <span class="arrow">▼</span>
-                    </button>
-
+                <!-- Programming -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-category-title">Programming</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">SOLID Principles</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Design Patterns</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>🎨 Graphics & Animation</h3>
-                    <ul class="skill-list collapsed">
-                        <li>Lighting that doesn’t blind the player</li>
-                        <li>Particle Effects <span>(Boom, sparkles, satisfaction)</span></li>
-                        <li>3D Math <span>(Vectors without tears)</span></li>
-                        <li>Animation Blending <span>(Smooth, like butter)</span></li>
-                    </ul>
-                    <button class="read-more-btn" aria-expanded="false">
-                        Read More <span class="arrow">▼</span>
-                    </button>
-
+                <!-- Optimization -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3 class="skill-category-title">Optimization</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity Profiler</span>
+                        <span class="skill-tag">FPS Optimization</span>
+                        <span class="skill-tag">Memory Management</span>
+                        <span class="skill-tag">Performance Profiling</span>
+                        <span class="skill-tag">APK Size Optimization</span>
+                        <span class="skill-tag">Build Optimization</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>🔌 SDK & Plugins</h3>
-                    <ul class="skill-list collapsed">
-                        <li>Google AdMob <span>(Ads without breaking gameplay)</span></li>
-                        <li>Asset Store Plugins <span>(Used wisely, not blindly)</span></li>
-                        <li>Third-party Plugins Integration</li>
-                        <li></li>
-                    </ul>
-                    <button class="read-more-btn" aria-expanded="false">
-                        Read More <span class="arrow">▼</span>
-                    </button>
-
+                <!-- SDK & Services -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="skill-category-title">SDK &amp; Services</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Firebase Analytics</span>
+                        <span class="skill-tag">Firebase Crashlytics</span>
+                        <span class="skill-tag">AdMob</span>
+                        <span class="skill-tag">Unity Ads</span>
+                        <span class="skill-tag">In-App Purchases</span>
+                        <span class="skill-tag">Third-Party SDKs</span>
+                    </div>
                 </div>
 
-                <div class="skill-card">
-                    <h3>🛠 Tools & Practices</h3>
-                    <ul class="skill-list collapsed">
-                        <li>Unity Editor</li>
-                        <li>Visual Studio</li>
-                        <li>Git / GitHub <span>(Commit early, commit often)</span></li>
-                        <li>Agile & Scrum <span>(Stand-ups included)</span></li>
-                    </ul>
-                    <button class="read-more-btn" aria-expanded="false">
-                        Read More <span class="arrow">▼</span>
-                    </button>
-
+                <!-- Tools -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="skill-category-title">Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity Editor</span>
+                        <span class="skill-tag">Visual Studio</span>
+                        <span class="skill-tag">JetBrains Rider</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
                 </div>
 
+                <!-- UI & Architecture -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="skill-category-title">UI &amp; Architecture</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Unity UI</span>
+                        <span class="skill-tag">Responsive Mobile UI</span>
+                        <span class="skill-tag">Canvas Optimization</span>
+                        <span class="skill-tag">Event-Driven Architecture</span>
+                        <span class="skill-tag">JSON Save Systems</span>
+                        <span class="skill-tag">PlayerPrefs</span>
+                        <span class="skill-tag">ES3</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!--===== About Section End =====-->
-    <!--===== Portfolio Section Start =====-->
-    <section class="portfolio section-padding" id="portfolio">
+    <!-- ===== FEATURED PROJECTS SECTION ===== -->
+    <section id="projects" class="projects-section">
         <div class="container">
-            <div class="row">
-                <div class="section-title text-align">
-                    <h5 class="sub-title">portfolio</h5>
-                    <h3 class="main-title">my latest work</h3>
-                    <ul class="line">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div> <!--===== Section Title =====-->
-            </div>
-            <div class="row">
-                <div class="portfolio-filter">
-                    <button type="button" class="active" data-filter="all">All</button>
-                    <button type="button" data-filter="2d-games">2D Games</button>
-                    <button type="button" data-filter="3d-games">3D Games</button>
-                </div>
-            </div>
-            <div class="row">
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Chess_Game.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Chess Game</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Royal_CallBreak_The_Elite.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Royal Callbreak: The Elite</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Word_Sprint_Guess_The_Word.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">WordSprint: Guess the word</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Space_Shooter.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Space Shooter</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Flappy_Bird.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Flappy Bird</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Pong.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Pong Multiplayer</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Dashing_Gragon.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Dashing Gragon</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Business_Tycoon.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Business Tycoon</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_CatDoku.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">CatDoku: Puzzle Game</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_Squicy_Escape.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Squicy Escape</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="2d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/2D_GirlsCard_Jigsaw_HD_Puzzle.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">GirlsCard Jigsaw: HD Puzzle</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Trust_Issues.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Trust Issues</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Player_Controller.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">3D Player Controller (Combat System)</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Car_Driving.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Driving Car Race</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Maze_Runner.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Jack Maze Runner</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Hero_Squad_Survival.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Hero Squad Survival</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Worm_Prison_Escape_Parkour.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Worm Prison: Escape Parkour</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Cat_Simulation.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Naughty Bad Cat Simulator</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-                <!--===== portfolio-item start =====-->
-                <div class="portfolio-item" data-category="3d-games">
-                    <div class="portfolio-item-inner">
-                        <div class="portfolio-img">
-                            <img src="images/portfolio/3D_Five_Night_With_Brainrot.png" alt="">
-                        </div>
-                        <div class="portfolio-info">
-                            <h4 style="color: white;">Five Night with Brainrot</h4>
-                            <div class="icon">
-                                <i class="fa fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--===== portfolio-item end =====-->
-            </div>
-        </div>
-    </section>
-    <!--===== Portfolio Section End =====-->
-    <!--===== Play Store Games Section Start =====-->
-    <section class="playstore section-padding" id="playstore">
-        <div class="container">
-            <div class="row">
-                <div class="section-title text-align">
-                    <h5 class="sub-title">Play Store</h5>
-                    <h3 class="main-title">On Playstore Games</h3>
-                    <ul class="line">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+            <div class="section-header reveal">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-subtitle">Games I've built, optimized, and shipped to production.</p>
             </div>
 
-            <div class="row games-container">
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
-                        <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/2D_Business_Tycoon.png"
-                                    alt="Business Tycoon: Empire Game">
-                            </div>
-                            <div class="portfolio-img">
-                                <h4>Business Tycoon: Empire Game</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- Game Item End -->
-
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
+            <!-- Featured Project 1: Hero Squad Survival -->
+            <div class="project-card featured reveal">
+                <div class="project-card-image">
+                    <img src="images/portfolio/3D_Hero_Squad_Survival.png" alt="Hero Squad Survival" loading="lazy">
+                    <div class="project-image-overlay">
                         <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/3D_Hero_Squad_Survival.png"
-                                    alt="Hero Squad Survival">
-                            </div>
-                            <div class="portfolio-img">
-                                <h4>Hero Squad Survival</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
+                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
-                <!-- Game Item End -->
-
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
-                        <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/3D_Worm_Prison_Escape_Parkour.png"
-                                    alt="Worm Prison: Escape Parkour">
-                            </div>
-                            <div class="portfolio-img">
-                                <h4>Worm Prison: Escape Parkour</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
+                <div class="project-card-content">
+                    <span class="project-genre">3D &middot; Wave-Based Survival</span>
+                    <h3 class="project-title">Hero Squad Survival</h3>
+                    <p class="project-description">
+                        A wave-based survival game featuring dynamic enemy spawning, AI behaviors and pathfinding,
+                        progressive wave difficulty, and a complete combat system. Integrated Firebase Analytics,
+                        advertisement SDKs, and in-app purchases for full monetization.
+                    </p>
+                    <div class="project-contributions">
+                        <h4>Key Contributions</h4>
+                        <ul>
+                            <li>Designed enemy wave spawning and AI behavior systems</li>
+                            <li>Built complete combat and player progression mechanics</li>
+                            <li>Integrated Firebase, AdMob, and in-app purchase SDKs</li>
+                            <li>Optimized for stable performance on low-end Android devices</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Unity 3D</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">AI / NavMesh</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">AdMob</span>
+                        <span class="tech-tag">IAP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN"
+                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
-                <!-- Game Item End -->
+            </div>
 
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
+            <!-- Featured Project 2: Business Tycoon -->
+            <div class="project-card featured reverse reveal">
+                <div class="project-card-image">
+                    <img src="images/portfolio/2D_Business_Tycoon.png" alt="Business Tycoon: Empire Game"
+                        loading="lazy">
+                    <div class="project-image-overlay">
+                        <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame"
+                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card-content">
+                    <span class="project-genre">2D &middot; Idle Business Simulation</span>
+                    <h3 class="project-title">Business Tycoon: Empire Game</h3>
+                    <p class="project-description">
+                        An idle business simulation featuring automated income systems, tap-to-earn mechanics,
+                        real estate and stock trading modules, tiered upgrade systems, and long-term player progression.
+                        Designed for deep engagement with session-based and offline earnings.
+                    </p>
+                    <div class="project-contributions">
+                        <h4>Key Contributions</h4>
+                        <ul>
+                            <li>Architected modular idle economy and progression systems</li>
+                            <li>Implemented tap-to-earn, offline earnings, and upgrade mechanics</li>
+                            <li>Built real estate and stock trading simulation features</li>
+                            <li>Designed data persistence and save systems</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Unity 2D</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Scriptable Objects</span>
+                        <span class="tech-tag">Save Systems</span>
+                        <span class="tech-tag">Economy Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame"
+                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Project 3: Naughty Bad Cat -->
+            <div class="project-card featured reveal">
+                <div class="project-card-image">
+                    <img src="images/portfolio/3D_Cat_Simulation.png" alt="Naughty Bad Cat: Prankster" loading="lazy">
+                    <div class="project-image-overlay">
                         <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/3D_Cat_Simulation.png"
-                                    alt="Naughty Bad Cat: Prankster">
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Naughty Bad Cat: Prankster</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
+                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
-                <!-- Game Item End -->
+                <div class="project-card-content">
+                    <span class="project-genre">3D &middot; Simulation / Casual</span>
+                    <h3 class="project-title">Naughty Bad Cat: Prankster</h3>
+                    <p class="project-description">
+                        A 3D simulation game where players control a mischievous cat causing pranks. Features
+                        smooth player movement, physics-based interactions, task-based objectives, prank mechanics,
+                        reward systems, and progressive level design.
+                    </p>
+                    <div class="project-contributions">
+                        <h4>Key Contributions</h4>
+                        <ul>
+                            <li>Developed player controller with physics-based movement</li>
+                            <li>Designed task and objective systems with reward mechanics</li>
+                            <li>Built level progression and prank interaction systems</li>
+                            <li>Optimized 3D rendering and physics for mobile performance</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Unity 3D</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Physics</span>
+                        <span class="tech-tag">Level Design</span>
+                        <span class="tech-tag">Mobile Optimization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster"
+                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
+            <!-- Featured Project 4: Five Nights with Brainrot -->
+            <div class="project-card featured reverse reveal">
+                <div class="project-card-image">
+                    <img src="images/portfolio/3D_Five_Night_With_Brainrot.png" alt="Five Nights with Brainrot"
+                        loading="lazy">
+                    <div class="project-image-overlay">
                         <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/3D_Five_Night_with_Brainrot.png"
-                                    alt="Naughty Bad Cat: Prankster">
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>Five Night With Brainrot</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
+                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
-                <!-- Game Item End -->
+                <div class="project-card-content">
+                    <span class="project-genre">3D &middot; Horror / Escape</span>
+                    <h3 class="project-title">Five Nights with Brainrot</h3>
+                    <p class="project-description">
+                        A horror escape game featuring enemy detection and AI chasing mechanics, puzzle-based
+                        objectives,
+                        survival gameplay loops, and atmospheric tension design. Players must solve puzzles and evade
+                        intelligent enemies to escape.
+                    </p>
+                    <div class="project-contributions">
+                        <h4>Key Contributions</h4>
+                        <ul>
+                            <li>Implemented enemy detection and AI chase systems</li>
+                            <li>Built puzzle mechanics and survival gameplay loops</li>
+                            <li>Designed atmospheric lighting and tension mechanics</li>
+                            <li>Optimized rendering for smooth mobile horror experience</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Unity 3D</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">AI Systems</span>
+                        <span class="tech-tag">Puzzle Design</span>
+                        <span class="tech-tag">Horror Mechanics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame"
+                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Game Item Start -->
-                <div class="portfolio-item">
-                    <div class="portfolio-item-inner">
-                        <a href="https://play.google.com/store/apps/details?id=com.girlscardjigsaw.hdpuzzle"
-                            target="_blank">
-                            <div>
-                                <img class="store-img" src="images/playstore/2D_GirlsCard_Jigsaw_HD_Puzzle.png"
-                                    alt="GirlsCard Jigsaw: HD Puzzle">
-                            </div>
-                            <div class="portfolio-info">
-                                <h4>GirlsCard Jigsaw: HD Puzzle</h4>
-                                <div class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </div>
-                            </div>
+            <!-- Featured Project 5: Worm Prison -->
+            <div class="project-card featured reveal">
+                <div class="project-card-image">
+                    <img src="images/portfolio/3D_Worm_Prison_Escape_Parkour.png" alt="Worm Prison: Escape Parkour"
+                        loading="lazy">
+                    <div class="project-image-overlay">
+                        <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour"
+                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
-                <!-- Game Item End -->
+                <div class="project-card-content">
+                    <span class="project-genre">3D &middot; Parkour / Escape</span>
+                    <h3 class="project-title">Worm Prison: Escape Parkour</h3>
+                    <p class="project-description">
+                        A 3D parkour and escape game featuring responsive player controls, obstacle mechanics,
+                        progressive level design, and Android-optimized performance. Players navigate challenging
+                        parkour courses to escape.
+                    </p>
+                    <div class="project-contributions">
+                        <h4>Key Contributions</h4>
+                        <ul>
+                            <li>Built responsive player controller and movement system</li>
+                            <li>Designed obstacle mechanics and level progression</li>
+                            <li>Implemented smooth parkour movement and camera systems</li>
+                            <li>Optimized performance for low-end Android devices</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Unity 3D</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Player Controller</span>
+                        <span class="tech-tag">Level Design</span>
+                        <span class="tech-tag">Android Optimization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour"
+                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== MORE PROJECTS ===== -->
+            <div class="more-projects-section reveal">
+                <h3 class="more-projects-title">More Projects</h3>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="2d">2D Games</button>
+                    <button class="filter-btn" data-filter="3d">3D Games</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Royal_CallBreak_The_Elite.png"
+                                alt="Royal Call Break: The Elite" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Royal Call Break: The Elite</h4>
+                            <span class="project-card-small-genre">2D &middot; Card Game</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Chess_Game.png" alt="Chess Game" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Chess Game</h4>
+                            <span class="project-card-small-genre">2D &middot; Strategy / Board</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Space_Shooter.png" alt="Space Shooter" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Space Shooter</h4>
+                            <span class="project-card-small-genre">2D &middot; Arcade / Shooter</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Flappy_Bird.png" alt="Flappy Bird Clone" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Flappy Bird Clone</h4>
+                            <span class="project-card-small-genre">2D &middot; Arcade / Casual</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Pong.png" alt="Pong Multiplayer" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Pong Multiplayer</h4>
+                            <span class="project-card-small-genre">2D &middot; Multiplayer / Arcade</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Dashing_Gragon.png" alt="Dashing Dragon" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Dashing Dragon</h4>
+                            <span class="project-card-small-genre">2D &middot; Endless Runner</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="3d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/3D_Car_Driving.png" alt="Driving Car Race" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Driving Car Race</h4>
+                            <span class="project-card-small-genre">3D &middot; Racing</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="3d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/3D_Maze_Runner.png" alt="Jack Maze Runner" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Jack Maze Runner</h4>
+                            <span class="project-card-small-genre">3D &middot; Puzzle / Adventure</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Word_Sprint_Guess_The_Word.png"
+                                alt="Word Sprint: Guess the Word" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Word Sprint: Guess the Word</h4>
+                            <span class="project-card-small-genre">2D &middot; Word / Puzzle</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_CatDoku.png" alt="Cat Doku: Puzzle Game" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Cat Doku: Puzzle Game</h4>
+                            <span class="project-card-small-genre">2D &middot; Puzzle</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_Squicy_Escape.png" alt="Squicy Escape" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Squicy Escape</h4>
+                            <span class="project-card-small-genre">2D &middot; Arcade / Casual</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="3d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/3D_Trust_Issues.png" alt="Trust Issues" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>Trust Issues</h4>
+                            <span class="project-card-small-genre">3D &middot; Adventure</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="3d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/3D_Player_Controller.png"
+                                alt="3D Player Controller & Combat System" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>3D Player Controller &amp; Combat System</h4>
+                            <span class="project-card-small-genre">3D &middot; Technical Demo</span>
+                        </div>
+                    </div>
+                    <div class="project-card-small" data-category="2d">
+                        <div class="project-card-small-image">
+                            <img src="images/portfolio/2D_GirlsCard_Jigsaw_HD_Puzzle.png"
+                                alt="GirlsCard Jigsaw: HD Puzzle" loading="lazy">
+                        </div>
+                        <div class="project-card-small-info">
+                            <h4>GirlsCard Jigsaw: HD Puzzle</h4>
+                            <span class="project-card-small-genre">2D &middot; Puzzle</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!--===== Play Store Games Section End =====-->
-    <!--===== Contact Section Start =====-->
-    <section class="contact-section section-padding" id="contact">
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="experience-section">
         <div class="container">
-            <div class="row">
-                <div class="section-title text-align">
-                    <h5 class="sub-title">contact</h5>
-                    <h3 class="main-title">get in touch</h3>
-                    <ul class="line">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div> <!--===== Section Title =====-->
+            <div class="section-header reveal">
+                <span class="section-label">Career Path</span>
+                <h2 class="section-title">Professional <span class="highlight">Experience</span></h2>
             </div>
-            <div class="row">
-                <!--===== contact item start =====-->
-                <div class="contact-item">
-                    <div class="contact-item-inner">
-                        <i class="fas fa-phone"></i>
-                        <span>Phone</span>
-                        <p>+91 9054180748</p>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i> 2023 — Present
+                            </span>
+                            <span class="timeline-duration">1.75+ years</span>
+                        </div>
+                        <h3 class="timeline-title">Unity Game Developer</h3>
+                        <h4 class="timeline-company">Escrow InfoTech</h4>
+                        <ul class="timeline-details">
+                            <li>Developed full-scale 2D and 3D mobile games using Unity and C# from concept to Play
+                                Store release</li>
+                            <li>Designed modular and reusable gameplay architectures using Scriptable Objects and
+                                event-driven systems</li>
+                            <li>Implemented player interactions, progression systems, enemy AI behaviors, and combat
+                                mechanics</li>
+                            <li>Optimized mobile performance achieving stable 50–60 FPS on low-end Android devices</li>
+                            <li>Improved memory usage, physics handling, and reduced unnecessary update cycles</li>
+                            <li>Integrated Firebase Analytics, Crashlytics, AdMob, and in-app purchase SDKs</li>
+                            <li>Prepared, tested, and deployed production Android builds</li>
+                            <li>Collaborated using GitHub with structured branching workflows</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">AdMob</span>
+                            <span class="tech-tag">Android</span>
+                        </div>
                     </div>
                 </div>
-                <!--===== contact item end =====-->
-                <!--===== contact item start =====-->
-                <div class="contact-item">
-                    <div class="contact-item-inner">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email</span>
-                        <p>parmarbrijesh2054@gmail.com</p>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="fas fa-calendar-alt"></i> 2022 — 2023
+                            </span>
+                            <span class="timeline-duration">1+ year</span>
+                        </div>
+                        <h3 class="timeline-title">Unity Game Developer</h3>
+                        <h4 class="timeline-company">CG Games &amp; Animation</h4>
+                        <ul class="timeline-details">
+                            <li>Developed 2D arcade games and endless runners using Unity</li>
+                            <li>Worked on multiplayer game mechanics and real-time interactions</li>
+                            <li>Implemented enemy wave systems, scoring mechanics, and physics-based collision systems
+                            </li>
+                            <li>Improved debugging workflows, gameplay programming patterns, and UI implementation</li>
+                            <li>Gained foundational experience in game development lifecycle and team collaboration</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tech-tag">Unity 2D</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Multiplayer</span>
+                            <span class="tech-tag">Physics</span>
+                        </div>
                     </div>
                 </div>
-                <!--===== contact item end =====-->
-                <!--===== contact item start =====-->
-                <div class="contact-item">
-                    <div class="contact-item-inner">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Address</span>
-                        <p>Surat, Gujarat</p>
-                    </div>
-                </div>
-                <!--===== contact item end =====-->
             </div>
-            <!--===== Contact Form =====-->
-            <div class="row">
-                <div class="contact-form">
-                    <form action="" method="post" data-netlify="true" name="contact">
-                        <div class="row">
-                            <div class="w-50">
-                                <div class="input-group">
-                                    <input name="Name" type="text" placeholder="Name" class="input-control">
-                                </div>
-                                <div class="input-group">
-                                    <input name="Email" type="email" placeholder="Email" class="input-control">
-                                </div>
-                                <div class="input-group">
-                                    <input name="Phone" type="text" placeholder="Phone" class="input-control">
-                                </div>
-                                <div class="input-group">
-                                    <input name="Subject" type="text" placeholder="Subject" class="input-control">
-                                </div>
-                            </div>
-                            <div class="input-group w-50">
-                                <textarea name="Message" class="input-control" placeholder="Message" id="" cols="50"
-                                    rows="5"></textarea>
-                            </div>
+        </div>
+    </section>
+
+    <!-- ===== GAME DEV SHOWCASE SECTION ===== -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Development Process</span>
+                <h2 class="section-title">Game Dev <span class="highlight">Showcase</span></h2>
+                <p class="section-subtitle">A look at how I approach game development — systems, mechanics, and
+                    optimization.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI &amp; Enemy Systems</h3>
+                    <p>NavMesh pathfinding, state machines for enemy behaviors, detection systems, and chase mechanics.
+                    </p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Gameplay demo — coming soon</span>
+                    </div>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-running"></i></div>
+                    <h3>Player Controllers</h3>
+                    <p>Responsive 2D/3D controllers with physics-based movement, combat systems, and smooth camera
+                        following.</p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Gameplay demo — coming soon</span>
+                    </div>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-crosshairs"></i></div>
+                    <h3>Combat Mechanics</h3>
+                    <p>Melee and ranged attack systems, hit detection, damage calculations, and combo mechanics.</p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Gameplay demo — coming soon</span>
+                    </div>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Performance Optimization</h3>
+                    <p>Unity Profiler analysis, draw call reduction, object pooling, memory optimization, and APK size
+                        reduction.</p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Before/after stats — coming soon</span>
+                    </div>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Physics Interactions</h3>
+                    <p>Rigidbody-based interactions, trigger systems, ragdoll physics, and physics-driven gameplay
+                        mechanics.</p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Gameplay demo — coming soon</span>
+                    </div>
+                </div>
+                <div class="showcase-card reveal">
+                    <div class="showcase-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Game Systems</h3>
+                    <p>Progression systems, save/load, economy design, reward mechanics, and event-driven architecture.
+                    </p>
+                    <div class="showcase-placeholder">
+                        <i class="fas fa-film"></i>
+                        <span>Architecture breakdown — coming soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESUME SECTION ===== -->
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <div class="resume-content reveal">
+                <span class="section-label">Resume</span>
+                <h2 class="resume-headline">Let's Build Something <span class="highlight">Extraordinary</span>.</h2>
+                <p class="resume-description">
+                    Explore my professional background, technical skills, and the complete list of games I've developed.
+                    I'm always looking for exciting new challenges in game development.
+                </p>
+                <div class="resume-cta">
+                    <a href="resume/BRIJESH_GAME.pdf" download class="btn-primary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="resume/BRIJESH_GAME.pdf" target="_blank" class="btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> View Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind or want to discuss game development? I'd love to hear
+                    from you.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:parmarbrijesh2054@gmail.com"
+                                class="contact-link">parmarbrijesh2054@gmail.com</a>
                         </div>
-                        <div class="row">
-                            <div class="submit-btn">
-                                <button type="submit" class="btn-1">Send Message</button>
-                            </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Surat, Gujarat, India</p>
                         </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://www.linkedin.com/in/brijesh-parmar-258541248/" target="_blank"
+                                rel="noopener noreferrer" class="contact-link">Brijesh Parmar</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/BrijeshParmar-com" target="_blank" rel="noopener noreferrer"
+                                class="contact-link">BrijeshParmar-com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" action="/" method="POST" data-netlify="true" name="contact"
+                        netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden" style="display:none;">
+                            <label>Don't fill this out: <input name="bot-field"></label>
+                        </p>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="Name" class="form-input" placeholder="Your name"
+                                required>
+                            <span class="form-error">Please enter your name</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="Email" class="form-input" placeholder="your@email.com"
+                                required>
+                            <span class="form-error">Please enter a valid email address</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="Subject" class="form-input"
+                                placeholder="What's this about?" required>
+                            <span class="form-error">Please enter a subject</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="Message" class="form-input form-textarea"
+                                placeholder="Tell me about your project or idea..." rows="5" required></textarea>
+                            <span class="form-error">Please enter your message</span>
+                        </div>
+                        <button type="submit" class="btn-primary form-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div class="form-status"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <!--===== Contact Section End =====-->
-    <!--===== Footer Section Start =====-->
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <div class="row justify-content-center">
-                <p class="copyright-text">&copy; 2025 by Brijesh Parmar</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <span class="nav-logo-mark">BP</span>
+                        <span class="nav-logo-text">Brijesh Parmar</span>
+                    </a>
+                    <p class="footer-tagline">Unity Game Developer &middot; Building playable worlds since 2022</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/brijesh-parmar-258541248/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/BrijeshParmar-com" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_.brijesh._.6969._/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:parmarbrijesh2054@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2025</span> Brijesh Parmar. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <!--===== Footer Section End =====-->
-    <!--===== Lightbox Start =====-->
-    <div class="lightbox">
-        <div class="lightbox-content">
-            <div class="lightbox-close">&times;</div>
-            <img src="images/portfolio/portfolio-2.jpg" onclick="nextItem()" class="lightbox-img" alt="">
-            <div class="lightbox-caption">
-                <div class="caption-text"></div>
-                <div class="caption-counter"></div>
-            </div>
-        </div>
-        <div class="lightbox-controls">
-            <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
-            <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
-        </div>
-    </div>
-    <!--===== Lightbox End =====-->
-    <!--===== Main JS =====-->
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>
 
