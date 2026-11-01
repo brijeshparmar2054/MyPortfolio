@@ -18,7 +18,7 @@
         content="Experienced Unity Game Developer specializing in 2D & 3D mobile games, gameplay systems, AI, and performance optimization.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://brijesh-parmar-unity-game-developer.netlify.app/">
-    <meta property="og:image" content="images/hero.png">
+    <meta property="og:image" content="images/portfolio/3D_Hero_Squad_Survival.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -88,6 +88,9 @@
                     I Build <span class="highlight">Worlds</span>.<br>
                     You <span class="highlight">Play</span> Them.
                 </h1>
+                <p class="hero-subtitle">
+                    Turning Ideas Into <span class="hero-typing-text highlight">Game Worlds</span><span class="cursor-blink">|</span>
+                </p>
                 <p class="hero-description">
                     Experienced Unity developer with 2.75+ years turning ideas into polished, playable mobile games —
                     from gameplay systems and AI to optimization and publishing on the Play Store.
@@ -102,20 +105,169 @@
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <div class="hero-image-wrapper">
-                    <img src="images/hero.png" alt="Brijesh Parmar — Unity Game Developer" width="500" height="500">
+                <div class="engine-preview-card" id="heroEnginePreview">
+                    <!-- Progress Bar for Auto-Cycle -->
+                    <div class="engine-stream-progress">
+                        <div class="stream-progress-bar" id="streamProgressBar"></div>
+                    </div>
+
+                    <!-- Terminal Window Header -->
+                    <div class="engine-card-header">
+                        <div class="engine-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="engine-title" id="engineTitle">
+                            <i class="fab fa-unity"></i> <span class="engine-scene-name">Hero_Squad_Arena.unity</span>
+                        </div>
+                        <div class="engine-live-badge">
+                            <span class="live-pulse"></span> 60 FPS STABLE
+                        </div>
+                    </div>
+
+                    <!-- Viewport Screen with Live Game Slides -->
+                    <div class="engine-viewport" id="heroEngineViewport">
+                        <!-- Slide 01: Hero Squad Survival -->
+                        <div class="engine-slide active" data-index="0" data-scene="Hero_Squad_Arena.unity" data-title="Hero Squad Survival" data-genre="3D Wave Survival" data-link="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN" data-tech1="C# AI &amp; NavMesh" data-tech2="Wave Progression" data-tech3="Android 60 FPS">
+                            <img src="images/portfolio/3D_Hero_Squad_Survival.png" alt="Hero Squad Survival 3D Gameplay" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">DRAW CALLS</span> <span class="hud-val">38 Batched</span></div>
+                                <div class="hud-stat"><span class="hud-label">PHYSICS</span> <span class="hud-val">60 Hz</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 02: Business Tycoon -->
+                        <div class="engine-slide" data-index="1" data-scene="Tycoon_Economy_Main.unity" data-title="Business Tycoon: Empire Game" data-genre="2D Idle Simulation" data-link="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame" data-tech1="Idle Economy Logic" data-tech2="JSON Save System" data-tech3="Offline Income">
+                            <img src="images/portfolio/2D_Business_Tycoon.png" alt="Business Tycoon: Empire Game" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">MEMORY</span> <span class="hud-val">94 MB</span></div>
+                                <div class="hud-stat"><span class="hud-label">UI CANVAS</span> <span class="hud-val">Batch Optimized</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 03: Naughty Bad Cat -->
+                        <div class="engine-slide" data-index="2" data-scene="Prankster_LivingRoom.unity" data-title="Naughty Bad Cat: Prankster" data-genre="3D Simulation / Casual" data-link="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster" data-tech1="3D Physics Ragdoll" data-tech2="Objective Trigger System" data-tech3="Mobile Controller">
+                            <img src="images/portfolio/3D_Cat_Simulation.png" alt="Naughty Bad Cat: Prankster" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">PHYSICS</span> <span class="hud-val">Ragdoll Active</span></div>
+                                <div class="hud-stat"><span class="hud-label">FPS</span> <span class="hud-val">58-60 Stable</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 04: Five Nights with Brainrot -->
+                        <div class="engine-slide" data-index="3" data-scene="Brainrot_Asylum_Level1.unity" data-title="Five Nights with Brainrot" data-genre="3D Horror Survival Escape" data-link="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame" data-tech1="Sensory Detection AI" data-tech2="Dynamic Lighting" data-tech3="Atmospheric Tension">
+                            <img src="images/portfolio/3D_Five_Night_With_Brainrot.png" alt="Five Nights with Brainrot" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">OCCLUSION</span> <span class="hud-val">Culled 64%</span></div>
+                                <div class="hud-stat"><span class="hud-label">AI CHASE</span> <span class="hud-val">Sensory Active</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 05: Worm Prison -->
+                        <div class="engine-slide" data-index="4" data-scene="WormPrison_Parkour_01.unity" data-title="Worm Prison: Escape Parkour" data-genre="3D Parkour Platformer" data-link="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour" data-tech1="Kinematic Controller" data-tech2="Collision Checkpoints" data-tech3="Draw Call Batching">
+                            <img src="images/portfolio/3D_Worm_Prison_Escape_Parkour.png" alt="Worm Prison: Escape Parkour" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">DRAW CALLS</span> <span class="hud-val">42 Batched</span></div>
+                                <div class="hud-stat"><span class="hud-label">PHYSICS</span> <span class="hud-val">60 Hz</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 06: GirlsCard Jigsaw -->
+                        <div class="engine-slide" data-index="5" data-scene="Jigsaw_HD_Puzzle_Grid.unity" data-title="GirlsCard Jigsaw: HD Puzzle" data-genre="2D HD Jigsaw Puzzle" data-link="https://play.google.com/store/apps/details?id=com.girlscardjigsaw.hdpuzzle" data-tech1="Touch Grid Snapping" data-tech2="HD Asset Loading" data-tech3="Validation Matrix">
+                            <img src="images/portfolio/2D_GirlsCard_Jigsaw_HD_Puzzle.png" alt="GirlsCard Jigsaw: HD Puzzle" class="engine-preview-img">
+                            <div class="engine-hud-overlay">
+                                <div class="hud-stat"><span class="hud-label">TEXTURE MEM</span> <span class="hud-val">Compressed</span></div>
+                                <div class="hud-stat"><span class="hud-label">TOUCH</span> <span class="hud-val">60 FPS Smooth</span></div>
+                                <div class="hud-stat"><span class="hud-label">STORE</span> <span class="hud-val">Google Play</span></div>
+                                <span class="hud-badge-published"><i class="fab fa-google-play"></i> Live Game</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Live Info Bar -->
+                        <div class="engine-active-info">
+                            <div class="active-info-text">
+                                <span class="active-game-genre" id="activeGameGenre">3D Wave Survival</span>
+                                <h4 class="active-game-title" id="activeGameTitle">Hero Squad Survival</h4>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn-live-store" id="activeStoreBtn">
+                                <i class="fab fa-google-play"></i> Play Store
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Auto-Cycling Published Games Indicator Track -->
+                    <div class="engine-games-track">
+                        <div class="track-header-row">
+                            <span class="track-title"><i class="fas fa-satellite-dish"></i> LIVE PUBLISHED GAMES</span>
+                            <span class="track-counter" id="timelineCounter">01 / 06</span>
+                        </div>
+                        <div class="reel-indicators-grid" id="timelineIndicators">
+                            <div class="reel-indicator active" data-slide="0">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">Hero Squad</span>
+                            </div>
+                            <div class="reel-indicator" data-slide="1">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">Tycoon</span>
+                            </div>
+                            <div class="reel-indicator" data-slide="2">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">Bad Cat</span>
+                            </div>
+                            <div class="reel-indicator" data-slide="3">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">Five Nights</span>
+                            </div>
+                            <div class="reel-indicator" data-slide="4">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">Worm Prison</span>
+                            </div>
+                            <div class="reel-indicator" data-slide="5">
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-name">GirlsCard</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terminal Footer Meta Items -->
+                    <div class="engine-card-footer" id="engineFooter">
+                        <div class="engine-meta-item">
+                            <i class="fas fa-microchip"></i>
+                            <span id="footerTech1">C# AI &amp; NavMesh</span>
+                        </div>
+                        <div class="engine-meta-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span id="footerTech2">Wave Progression</span>
+                        </div>
+                        <div class="engine-meta-item">
+                            <i class="fas fa-bolt"></i>
+                            <span id="footerTech3">Android 60 FPS</span>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="hero-float-card hero-float-1">
                     <i class="fab fa-unity"></i>
-                    <span>Unity Engine</span>
+                    <span>Unity 2D &amp; 3D</span>
                 </div>
                 <div class="hero-float-card hero-float-2">
                     <i class="fas fa-mobile-alt"></i>
-                    <span>Mobile Games</span>
+                    <span>6 Live Published Games</span>
                 </div>
                 <div class="hero-float-card hero-float-3">
                     <i class="fas fa-code"></i>
-                    <span>C# Developer</span>
+                    <span>C# Architecture</span>
                 </div>
             </div>
         </div>
@@ -167,10 +319,57 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image-side reveal">
-                    <div class="about-image-wrapper">
-                        <img src="images/about_hero.png" alt="Brijesh Parmar" width="400" height="400">
-                        <div class="about-image-glow"></div>
+                <div class="about-side-panel reveal">
+                    <div class="dev-spec-card">
+                        <div class="spec-card-header">
+                            <div class="spec-card-title">
+                                <i class="fas fa-terminal"></i>
+                                <span>DEVELOPER_PROFILE.cs</span>
+                            </div>
+                            <div class="spec-card-status">
+                                <span class="status-dot"></span> 2.75+ YRS EXP
+                            </div>
+                        </div>
+                        <div class="spec-card-body">
+                            <div class="spec-row">
+                                <span class="spec-key">Role:</span>
+                                <span class="spec-val">Unity Game Developer</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Location:</span>
+                                <span class="spec-val">Surat, Gujarat, India</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Core Engine:</span>
+                                <span class="spec-val">Unity (2D &amp; 3D Mobile)</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Language:</span>
+                                <span class="spec-val">C#, OOP, SOLID Principles</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Specialties:</span>
+                                <span class="spec-val">Gameplay, Enemy AI, State Machines</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Target Performance:</span>
+                                <span class="spec-val">50–60 FPS on Low-End Android</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Publishing:</span>
+                                <span class="spec-val">Play Store, Firebase, AdMob, IAP</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Architecture:</span>
+                                <span class="spec-val">Scriptable Objects, Event-Driven</span>
+                            </div>
+                        </div>
+                        <div class="spec-card-footer">
+                            <div class="spec-pill"><i class="fab fa-unity"></i> Unity Engine</div>
+                            <div class="spec-pill"><i class="fas fa-gamepad"></i> Mobile Games</div>
+                            <div class="spec-pill"><i class="fas fa-tachometer-alt"></i> Profiler &amp; FPS</div>
+                            <div class="spec-pill"><i class="fab fa-google-play"></i> Play Store Live</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -205,6 +404,8 @@
                         <span class="skill-tag">State Machines</span>
                         <span class="skill-tag">NavMesh &amp; AI Logic</span>
                         <span class="skill-tag">Object Pooling</span>
+                        <span class="skill-tag">Unity Addressables</span>
+                        <span class="skill-tag">Asset Bundles</span>
                     </div>
                 </div>
 
@@ -312,368 +513,825 @@
                 <p class="section-subtitle">Games I've built, optimized, and shipped to production.</p>
             </div>
 
-            <!-- Featured Project 1: Hero Squad Survival -->
-            <div class="project-card featured reveal">
-                <div class="project-card-image">
-                    <img src="images/portfolio/3D_Hero_Squad_Survival.png" alt="Hero Squad Survival" loading="lazy">
-                    <div class="project-image-overlay">
-                        <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN"
-                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+            <div class="featured-projects">
+                <!-- Featured Project 1: Hero Squad Survival -->
+                <article class="featured-card reveal" data-accent="green">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">01</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">3D WAVE SURVIVAL</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card-content">
-                    <span class="project-genre">3D &middot; Wave-Based Survival</span>
-                    <h3 class="project-title">Hero Squad Survival</h3>
-                    <p class="project-description">
-                        A wave-based survival game featuring dynamic enemy spawning, AI behaviors and pathfinding,
-                        progressive wave difficulty, and a complete combat system. Integrated Firebase Analytics,
-                        advertisement SDKs, and in-app purchases for full monetization.
-                    </p>
-                    <div class="project-contributions">
-                        <h4>Key Contributions</h4>
-                        <ul>
-                            <li>Designed enemy wave spawning and AI behavior systems</li>
-                            <li>Built complete combat and player progression mechanics</li>
-                            <li>Integrated Firebase, AdMob, and in-app purchase SDKs</li>
-                            <li>Optimized for stable performance on low-end Android devices</li>
-                        </ul>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/3D_Hero_Squad_Survival.png" alt="Hero Squad Survival 3D Gameplay" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 3D</span>
+                                    <span class="game-badge"><i class="fas fa-tachometer-alt"></i> 60 FPS Stable</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">3D &middot; Wave-Based Survival</span>
+                                <h3 class="game-title">Hero Squad Survival</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                A wave-based survival game featuring dynamic enemy spawning, AI behaviors and pathfinding,
+                                progressive wave difficulty, and a complete combat system. Integrated Firebase Analytics,
+                                advertisement SDKs, and in-app purchases for full monetization.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Designed enemy wave spawning and AI behavior systems</li>
+                                    <li>Built complete combat and player progression mechanics</li>
+                                    <li>Integrated Firebase, AdMob, and in-app purchase SDKs</li>
+                                    <li>Optimized for stable 55–60 FPS on low-end Android devices</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 3D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">AI / NavMesh</span>
+                                <span class="tech-pill">Firebase</span>
+                                <span class="tech-pill">AdMob</span>
+                                <span class="tech-pill">IAP</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Unity 3D</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">AI / NavMesh</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">AdMob</span>
-                        <span class="tech-tag">IAP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.herosquadsurvival.herodefender&hl=en_IN"
-                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Featured Project 2: Business Tycoon -->
-            <div class="project-card featured reverse reveal">
-                <div class="project-card-image">
-                    <img src="images/portfolio/2D_Business_Tycoon.png" alt="Business Tycoon: Empire Game"
-                        loading="lazy">
-                    <div class="project-image-overlay">
-                        <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame"
-                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+                <!-- Featured Project 2: Business Tycoon -->
+                <article class="featured-card card-reversed reveal" data-accent="cyan">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">02</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">IDLE ECONOMY SIMULATION</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card-content">
-                    <span class="project-genre">2D &middot; Idle Business Simulation</span>
-                    <h3 class="project-title">Business Tycoon: Empire Game</h3>
-                    <p class="project-description">
-                        An idle business simulation featuring automated income systems, tap-to-earn mechanics,
-                        real estate and stock trading modules, tiered upgrade systems, and long-term player progression.
-                        Designed for deep engagement with session-based and offline earnings.
-                    </p>
-                    <div class="project-contributions">
-                        <h4>Key Contributions</h4>
-                        <ul>
-                            <li>Architected modular idle economy and progression systems</li>
-                            <li>Implemented tap-to-earn, offline earnings, and upgrade mechanics</li>
-                            <li>Built real estate and stock trading simulation features</li>
-                            <li>Designed data persistence and save systems</li>
-                        </ul>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/2D_Business_Tycoon.png" alt="Business Tycoon: Empire Game" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 2D</span>
+                                    <span class="game-badge"><i class="fas fa-coins"></i> Idle Engine</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">2D &middot; Idle Business Simulation</span>
+                                <h3 class="game-title">Business Tycoon: Empire Game</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                An idle business simulation featuring automated income systems, tap-to-earn mechanics,
+                                real estate and stock trading modules, tiered upgrade systems, and long-term player progression.
+                                Designed for deep engagement with session-based and offline earnings.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Architected modular idle economy and automated income systems</li>
+                                    <li>Implemented tap-to-earn, offline earnings, and upgrade mechanics</li>
+                                    <li>Built real estate and stock trading simulation features</li>
+                                    <li>Designed persistent data saving with JSON and PlayerPrefs</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 2D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Scriptable Objects</span>
+                                <span class="tech-pill">Save Systems</span>
+                                <span class="tech-pill">Economy Design</span>
+                                <span class="tech-pill">Canvas UI</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Unity 2D</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Scriptable Objects</span>
-                        <span class="tech-tag">Save Systems</span>
-                        <span class="tech-tag">Economy Design</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.businesstycoon.empiregame"
-                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Featured Project 3: Naughty Bad Cat -->
-            <div class="project-card featured reveal">
-                <div class="project-card-image">
-                    <img src="images/portfolio/3D_Cat_Simulation.png" alt="Naughty Bad Cat: Prankster" loading="lazy">
-                    <div class="project-image-overlay">
-                        <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster"
-                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+                <!-- Featured Project 3: Naughty Bad Cat -->
+                <article class="featured-card reveal" data-accent="blue">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">03</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">3D CASUAL SIMULATION</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card-content">
-                    <span class="project-genre">3D &middot; Simulation / Casual</span>
-                    <h3 class="project-title">Naughty Bad Cat: Prankster</h3>
-                    <p class="project-description">
-                        A 3D simulation game where players control a mischievous cat causing pranks. Features
-                        smooth player movement, physics-based interactions, task-based objectives, prank mechanics,
-                        reward systems, and progressive level design.
-                    </p>
-                    <div class="project-contributions">
-                        <h4>Key Contributions</h4>
-                        <ul>
-                            <li>Developed player controller with physics-based movement</li>
-                            <li>Designed task and objective systems with reward mechanics</li>
-                            <li>Built level progression and prank interaction systems</li>
-                            <li>Optimized 3D rendering and physics for mobile performance</li>
-                        </ul>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/3D_Cat_Simulation.png" alt="Naughty Bad Cat: Prankster" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 3D</span>
+                                    <span class="game-badge"><i class="fas fa-paw"></i> Physics Ragdoll</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">3D &middot; Simulation / Casual</span>
+                                <h3 class="game-title">Naughty Bad Cat: Prankster</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                A 3D simulation game where players control a mischievous cat causing pranks. Features
+                                smooth player movement, physics-based interactions, task-based objectives, prank mechanics,
+                                reward systems, and progressive level design.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Developed responsive player controller with physics-based movement</li>
+                                    <li>Designed task and objective systems with interactive reward mechanics</li>
+                                    <li>Built level progression, mission triggers, and prank interactions</li>
+                                    <li>Optimized 3D mobile rendering and collision performance</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 3D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Physics</span>
+                                <span class="tech-pill">Level Design</span>
+                                <span class="tech-pill">Mobile Optimization</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Unity 3D</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Physics</span>
-                        <span class="tech-tag">Level Design</span>
-                        <span class="tech-tag">Mobile Optimization</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.naughtybadcat.prankster"
-                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Featured Project 4: Five Nights with Brainrot -->
-            <div class="project-card featured reverse reveal">
-                <div class="project-card-image">
-                    <img src="images/portfolio/3D_Five_Night_With_Brainrot.png" alt="Five Nights with Brainrot"
-                        loading="lazy">
-                    <div class="project-image-overlay">
-                        <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame"
-                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+                <!-- Featured Project 4: Five Nights with Brainrot -->
+                <article class="featured-card card-reversed reveal" data-accent="violet">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">04</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">3D HORROR SURVIVAL ESCAPE</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card-content">
-                    <span class="project-genre">3D &middot; Horror / Escape</span>
-                    <h3 class="project-title">Five Nights with Brainrot</h3>
-                    <p class="project-description">
-                        A horror escape game featuring enemy detection and AI chasing mechanics, puzzle-based
-                        objectives,
-                        survival gameplay loops, and atmospheric tension design. Players must solve puzzles and evade
-                        intelligent enemies to escape.
-                    </p>
-                    <div class="project-contributions">
-                        <h4>Key Contributions</h4>
-                        <ul>
-                            <li>Implemented enemy detection and AI chase systems</li>
-                            <li>Built puzzle mechanics and survival gameplay loops</li>
-                            <li>Designed atmospheric lighting and tension mechanics</li>
-                            <li>Optimized rendering for smooth mobile horror experience</li>
-                        </ul>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/3D_Five_Night_With_Brainrot.png" alt="Five Nights with Brainrot" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 3D</span>
+                                    <span class="game-badge"><i class="fas fa-ghost"></i> AI Chase Logic</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">3D &middot; Horror / Escape</span>
+                                <h3 class="game-title">Five Nights with Brainrot</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                A horror escape game featuring enemy detection and AI chasing mechanics, puzzle-based
+                                objectives, survival gameplay loops, and atmospheric tension design. Players must solve
+                                puzzles and evade intelligent enemies to escape.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Implemented enemy AI perception with sensory detection and chase state machine</li>
+                                    <li>Built environmental puzzle mechanics and escape survival gameplay loops</li>
+                                    <li>Designed atmospheric tension, dynamic audio cues, and lighting triggers</li>
+                                    <li>Optimized mobile shader performance and occlusion culling</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 3D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">AI Perception</span>
+                                <span class="tech-pill">Puzzle Design</span>
+                                <span class="tech-pill">Horror Mechanics</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Unity 3D</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">AI Systems</span>
-                        <span class="tech-tag">Puzzle Design</span>
-                        <span class="tech-tag">Horror Mechanics</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.fivenightwithbrainrot.horrorescapegame"
-                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
-                    </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Featured Project 5: Worm Prison -->
-            <div class="project-card featured reveal">
-                <div class="project-card-image">
-                    <img src="images/portfolio/3D_Worm_Prison_Escape_Parkour.png" alt="Worm Prison: Escape Parkour"
-                        loading="lazy">
-                    <div class="project-image-overlay">
-                        <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour"
-                            target="_blank" rel="noopener noreferrer" class="project-overlay-link">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+                <!-- Featured Project 5: Worm Prison -->
+                <article class="featured-card reveal" data-accent="green">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">05</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">3D PARKOUR PLATFORMER</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card-content">
-                    <span class="project-genre">3D &middot; Parkour / Escape</span>
-                    <h3 class="project-title">Worm Prison: Escape Parkour</h3>
-                    <p class="project-description">
-                        A 3D parkour and escape game featuring responsive player controls, obstacle mechanics,
-                        progressive level design, and Android-optimized performance. Players navigate challenging
-                        parkour courses to escape.
-                    </p>
-                    <div class="project-contributions">
-                        <h4>Key Contributions</h4>
-                        <ul>
-                            <li>Built responsive player controller and movement system</li>
-                            <li>Designed obstacle mechanics and level progression</li>
-                            <li>Implemented smooth parkour movement and camera systems</li>
-                            <li>Optimized performance for low-end Android devices</li>
-                        </ul>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/3D_Worm_Prison_Escape_Parkour.png" alt="Worm Prison: Escape Parkour" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 3D</span>
+                                    <span class="game-badge"><i class="fas fa-running"></i> Precision Parkour</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">3D &middot; Parkour / Escape</span>
+                                <h3 class="game-title">Worm Prison: Escape Parkour</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                A 3D parkour and escape game featuring responsive player controls, obstacle mechanics,
+                                progressive level design, and Android-optimized performance. Players navigate challenging
+                                parkour courses to escape.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Built responsive 3D player controller with jump, mantle, and slide mechanics</li>
+                                    <li>Designed dynamic obstacle triggers and checkpoint progression systems</li>
+                                    <li>Implemented smooth mobile camera follow with collision prevention</li>
+                                    <li>Optimized mobile physics and draw call batching for low-end Android</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 3D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Player Controller</span>
+                                <span class="tech-pill">Collision Physics</span>
+                                <span class="tech-pill">Android Optimization</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-tech-stack">
-                        <span class="tech-tag">Unity 3D</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Player Controller</span>
-                        <span class="tech-tag">Level Design</span>
-                        <span class="tech-tag">Android Optimization</span>
+                </article>
+
+                <!-- Featured Project 6: GirlsCard Jigsaw: HD Puzzle -->
+                <article class="featured-card card-reversed reveal" data-accent="cyan">
+                    <div class="card-meta-bar">
+                        <div class="card-index-tag">
+                            <span class="index-num">06</span>
+                            <span class="index-divider">//</span>
+                            <span class="index-category">2D HD JIGSAW PUZZLE</span>
+                        </div>
+                        <div class="card-status-pill">
+                            <span class="status-live-dot"></span>
+                            <span>GOOGLE PLAY LIVE</span>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.wormprison.escapeparkour"
-                            target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
-                            <i class="fab fa-google-play"></i> Play Store
-                        </a>
+                    <div class="card-main-grid">
+                        <div class="card-visual-col">
+                            <div class="game-frame">
+                                <span class="hud-corner hud-tl"></span>
+                                <span class="hud-corner hud-tr"></span>
+                                <span class="hud-corner hud-bl"></span>
+                                <span class="hud-corner hud-br"></span>
+                                <div class="game-img-wrap">
+                                    <img src="images/portfolio/2D_GirlsCard_Jigsaw_HD_Puzzle.png" alt="GirlsCard Jigsaw: HD Puzzle" loading="lazy">
+                                </div>
+                                <div class="game-frame-badges">
+                                    <span class="game-badge"><i class="fab fa-unity"></i> Unity 2D</span>
+                                    <span class="game-badge"><i class="fas fa-puzzle-piece"></i> Grid Snapping</span>
+                                </div>
+                                <a href="https://play.google.com/store/apps/details?id=com.girlscardjigsaw.hdpuzzle" target="_blank" rel="noopener noreferrer" class="game-play-overlay">
+                                    <span class="play-overlay-btn">
+                                        <i class="fab fa-google-play"></i> Open Store
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-info-col">
+                            <div class="card-heading-wrap">
+                                <span class="genre-pill">2D &middot; Jigsaw / Puzzle</span>
+                                <h3 class="game-title">GirlsCard Jigsaw: HD Puzzle</h3>
+                            </div>
+                            <p class="game-synopsis">
+                                An Android-based HD jigsaw puzzle game published on the Google Play Store, featuring intuitive
+                                piece-snapping mechanics, high-resolution puzzle art, dynamic difficulty settings, and responsive
+                                mobile UI designed for high player retention and smooth touch controls.
+                            </p>
+                            <div class="tech-highlights-box">
+                                <div class="highlights-title">
+                                    <i class="fas fa-microchip"></i>
+                                    <span>Key Engineering &amp; Responsibilities</span>
+                                </div>
+                                <ul class="highlights-list">
+                                    <li>Developed and published full puzzle game architecture to the Google Play Store</li>
+                                    <li>Designed responsive mobile UI/UX and smooth touch-based puzzle interaction</li>
+                                    <li>Implemented piece validation, grid snapping algorithms, and difficulty progression</li>
+                                    <li>Optimized asset loading and memory management for seamless HD rendering on mobile</li>
+                                </ul>
+                            </div>
+                            <div class="game-tech-tags">
+                                <span class="tech-pill">Unity 2D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Puzzle Mechanics</span>
+                                <span class="tech-pill">Responsive UI</span>
+                                <span class="tech-pill">Memory Optimization</span>
+                                <span class="tech-pill">Play Store Live</span>
+                            </div>
+                            <div class="card-cta-row">
+                                <a href="https://play.google.com/store/apps/details?id=com.girlscardjigsaw.hdpuzzle" target="_blank" rel="noopener noreferrer" class="btn-store-play">
+                                    <i class="fab fa-google-play"></i>
+                                    <span>Play on Google Play</span>
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
 
             <!-- ===== MORE PROJECTS ===== -->
             <div class="more-projects-section reveal">
-                <h3 class="more-projects-title">More Projects</h3>
+                <div class="more-projects-header">
+                    <span class="archive-section-badge"><i class="fas fa-boxes"></i> Complete Portfolio Archive</span>
+                    <h3 class="more-projects-title">Additional Games &amp; Technical Demos</h3>
+                    <p class="more-projects-subtitle">A curated archive of 2D/3D mobile titles, arcade mechanics, strategy games, and gameplay prototypes.</p>
+                </div>
                 <div class="project-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="2d">2D Games</button>
-                    <button class="filter-btn" data-filter="3d">3D Games</button>
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-layer-group"></i> All Projects <span class="filter-count">13</span>
+                    </button>
+                    <button class="filter-btn" data-filter="2d">
+                        <i class="fas fa-gamepad"></i> 2D Games <span class="filter-count">8</span>
+                    </button>
+                    <button class="filter-btn" data-filter="3d">
+                        <i class="fas fa-cube"></i> 3D Demos &amp; Systems <span class="filter-count">5</span>
+                    </button>
                 </div>
                 <div class="projects-grid">
+                    <!-- Project 01: Royal Call Break -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Royal_CallBreak_The_Elite.png"
                                 alt="Royal Call Break: The Elite" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Card</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Card Strategy &middot; Bot AI</span>
+                                <span class="archive-index-tag">#01</span>
+                            </div>
                             <h4>Royal Call Break: The Elite</h4>
-                            <span class="project-card-small-genre">2D &middot; Card Game</span>
+                            <p class="archive-card-desc">
+                                Trick-taking card game engine featuring dynamic AI bidding behaviors, legal card evaluation, and tournament scorekeeping.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Card AI</span>
+                                <span class="archive-tech-pill">Canvas UI</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 02: Chess Game -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Chess_Game.png" alt="Chess Game" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Strategy</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Board Strategy &middot; Turn System</span>
+                                <span class="archive-index-tag">#02</span>
+                            </div>
                             <h4>Chess Game</h4>
-                            <span class="project-card-small-genre">2D &middot; Strategy / Board</span>
+                            <p class="archive-card-desc">
+                                Turn-based chess implementation with legal move validation, check/checkmate detection, and stateful board architecture.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Move Validation</span>
+                                <span class="archive-tech-pill">State Logic</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 03: Space Shooter -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Space_Shooter.png" alt="Space Shooter" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Arcade</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Arcade &middot; Bullet Hell</span>
+                                <span class="archive-index-tag">#03</span>
+                            </div>
                             <h4>Space Shooter</h4>
-                            <span class="project-card-small-genre">2D &middot; Arcade / Shooter</span>
+                            <p class="archive-card-desc">
+                                Fast-paced arcade shooter with high-throughput projectile object pooling, progressive enemy waves, and powerup drops.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Object Pooling</span>
+                                <span class="archive-tech-pill">Wave Spawner</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 04: Flappy Bird Clone -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Flappy_Bird.png" alt="Flappy Bird Clone" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Casual</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Arcade &middot; Physics</span>
+                                <span class="archive-index-tag">#04</span>
+                            </div>
                             <h4>Flappy Bird Clone</h4>
-                            <span class="project-card-small-genre">2D &middot; Arcade / Casual</span>
+                            <p class="archive-card-desc">
+                                Physics-based tap-to-fly mechanics featuring procedural pipe obstacle spawning, collision triggers, and high score storage.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Rigidbody2D</span>
+                                <span class="archive-tech-pill">Procedural Spawns</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 05: Pong Multiplayer -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Pong.png" alt="Pong Multiplayer" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Multiplayer</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Multiplayer &middot; Arcade Physics</span>
+                                <span class="archive-index-tag">#05</span>
+                            </div>
                             <h4>Pong Multiplayer</h4>
-                            <span class="project-card-small-genre">2D &middot; Multiplayer / Arcade</span>
+                            <p class="archive-card-desc">
+                                Classic two-player table tennis with paddle collision angles, ball velocity scaling, and responsive scoreboard state.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Local Multiplayer</span>
+                                <span class="archive-tech-pill">Bounce Physics</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 06: Dashing Dragon -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Dashing_Gragon.png" alt="Dashing Dragon" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Runner</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Endless Runner &middot; Arcade</span>
+                                <span class="archive-index-tag">#06</span>
+                            </div>
                             <h4>Dashing Dragon</h4>
-                            <span class="project-card-small-genre">2D &middot; Endless Runner</span>
+                            <p class="archive-card-desc">
+                                Endless runner featuring procedural obstacle generation, dynamic speed progression, and collision hazard handling.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Procedural Gen</span>
+                                <span class="archive-tech-pill">Score Multipliers</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 07: Driving Car Race -->
                     <div class="project-card-small" data-category="3d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/3D_Car_Driving.png" alt="Driving Car Race" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 3D Racing</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Racing &middot; Vehicle Physics</span>
+                                <span class="archive-index-tag">#07</span>
+                            </div>
                             <h4>Driving Car Race</h4>
-                            <span class="project-card-small-genre">3D &middot; Racing</span>
+                            <p class="archive-card-desc">
+                                3D vehicle physics controller with custom WheelColliders, suspension damping, forward/reverse torque, and drift response.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 3D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">WheelColliders</span>
+                                <span class="archive-tech-pill">Vehicle Physics</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 08: Jack Maze Runner -->
                     <div class="project-card-small" data-category="3d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/3D_Maze_Runner.png" alt="Jack Maze Runner" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 3D Adventure</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Labyrinth &middot; Puzzle Adventure</span>
+                                <span class="archive-index-tag">#08</span>
+                            </div>
                             <h4>Jack Maze Runner</h4>
-                            <span class="project-card-small-genre">3D &middot; Puzzle / Adventure</span>
+                            <p class="archive-card-desc">
+                                Third-person labyrinth puzzle game with interactive door switches, trap triggers, checkpoint respawns, and camera collision logic.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 3D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Trigger Systems</span>
+                                <span class="archive-tech-pill">Camera Controls</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 09: Word Sprint -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Word_Sprint_Guess_The_Word.png"
                                 alt="Word Sprint: Guess the Word" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Puzzle</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Word Puzzle &middot; Trivia</span>
+                                <span class="archive-index-tag">#09</span>
+                            </div>
                             <h4>Word Sprint: Guess the Word</h4>
-                            <span class="project-card-small-genre">2D &middot; Word / Puzzle</span>
+                            <p class="archive-card-desc">
+                                Word guessing puzzle game with animated letter slots, real-time dictionary string validation, and timer-driven bonuses.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">String Logic</span>
+                                <span class="archive-tech-pill">Dynamic UI</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 10: Cat Doku -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_CatDoku.png" alt="Cat Doku: Puzzle Game" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Puzzle</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Grid Puzzle &middot; Logic Engine</span>
+                                <span class="archive-index-tag">#10</span>
+                            </div>
                             <h4>Cat Doku: Puzzle Game</h4>
-                            <span class="project-card-small-genre">2D &middot; Puzzle</span>
+                            <p class="archive-card-desc">
+                                Sudoku-inspired feline puzzle featuring 9x9 matrix validation algorithms, tile-placement hints, and difficulty tiers.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Matrix Math</span>
+                                <span class="archive-tech-pill">Puzzle Logic</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 11: Squicy Escape -->
                     <div class="project-card-small" data-category="2d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/2D_Squicy_Escape.png" alt="Squicy Escape" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 2D Casual</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Casual Runner &middot; Reflex</span>
+                                <span class="archive-index-tag">#11</span>
+                            </div>
                             <h4>Squicy Escape</h4>
-                            <span class="project-card-small-genre">2D &middot; Arcade / Casual</span>
+                            <p class="archive-card-desc">
+                                Fast-reaction escape runner with smooth mobile touch controls, moving obstacle hazard matrices, and stage triggers.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 2D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Mobile Touch</span>
+                                <span class="archive-tech-pill">Hazard Timing</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 12: Trust Issues -->
                     <div class="project-card-small" data-category="3d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/3D_Trust_Issues.png" alt="Trust Issues" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 3D Narrative</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Atmospheric &middot; Narrative Adventure</span>
+                                <span class="archive-index-tag">#12</span>
+                            </div>
                             <h4>Trust Issues</h4>
-                            <span class="project-card-small-genre">3D &middot; Adventure</span>
+                            <p class="archive-card-desc">
+                                Atmospheric 3D exploration prototype showcasing interactive environment triggers, lighting mood transitions, and audio cues.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 3D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">Event Architecture</span>
+                                <span class="archive-tech-pill">Level Design</span>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 13: 3D Player Controller & Combat System -->
                     <div class="project-card-small" data-category="3d">
                         <div class="project-card-small-image">
                             <img src="images/portfolio/3D_Player_Controller.png"
                                 alt="3D Player Controller & Combat System" loading="lazy">
+                            <span class="archive-type-badge"><i class="fab fa-unity"></i> 3D System</span>
+                            <div class="archive-image-overlay">
+                                <span class="archive-overlay-pill"><i class="fas fa-gamepad"></i> Preview Game</span>
+                            </div>
                         </div>
                         <div class="project-card-small-info">
+                            <div class="archive-meta-bar">
+                                <span class="project-card-small-genre">Technical Demo &middot; Combat System</span>
+                                <span class="archive-index-tag">#13</span>
+                            </div>
                             <h4>3D Player Controller &amp; Combat System</h4>
-                            <span class="project-card-small-genre">3D &middot; Technical Demo</span>
-                        </div>
-                    </div>
-                    <div class="project-card-small" data-category="2d">
-                        <div class="project-card-small-image">
-                            <img src="images/portfolio/2D_GirlsCard_Jigsaw_HD_Puzzle.png"
-                                alt="GirlsCard Jigsaw: HD Puzzle" loading="lazy">
-                        </div>
-                        <div class="project-card-small-info">
-                            <h4>GirlsCard Jigsaw: HD Puzzle</h4>
-                            <span class="project-card-small-genre">2D &middot; Puzzle</span>
+                            <p class="archive-card-desc">
+                                Kinematic third-person character controller featuring state machines, hitbox attack detection, mantling, and dynamic camera follow.
+                            </p>
+                            <div class="archive-card-tech">
+                                <span class="archive-tech-pill">Unity 3D</span>
+                                <span class="archive-tech-pill">C#</span>
+                                <span class="archive-tech-pill">State Machine</span>
+                                <span class="archive-tech-pill">Combat Hitboxes</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -768,9 +1426,11 @@
                     <h3>AI &amp; Enemy Systems</h3>
                     <p>NavMesh pathfinding, state machines for enemy behaviors, detection systems, and chase mechanics.
                     </p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Gameplay demo — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">NavMesh Agent</span>
+                        <span class="showcase-tag">Finite State Machine</span>
+                        <span class="showcase-tag">Perception &amp; Detection</span>
+                        <span class="showcase-tag">Path Following</span>
                     </div>
                 </div>
                 <div class="showcase-card reveal">
@@ -778,18 +1438,22 @@
                     <h3>Player Controllers</h3>
                     <p>Responsive 2D/3D controllers with physics-based movement, combat systems, and smooth camera
                         following.</p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Gameplay demo — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">Kinematic Controllers</span>
+                        <span class="showcase-tag">Physics Movement</span>
+                        <span class="showcase-tag">Camera Smoothing</span>
+                        <span class="showcase-tag">Mobile Touch Inputs</span>
                     </div>
                 </div>
                 <div class="showcase-card reveal">
                     <div class="showcase-icon"><i class="fas fa-crosshairs"></i></div>
                     <h3>Combat Mechanics</h3>
                     <p>Melee and ranged attack systems, hit detection, damage calculations, and combo mechanics.</p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Gameplay demo — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">Hitbox / Hurtbox</span>
+                        <span class="showcase-tag">Combo State Trees</span>
+                        <span class="showcase-tag">Projectile Trajectories</span>
+                        <span class="showcase-tag">Damage Formulas</span>
                     </div>
                 </div>
                 <div class="showcase-card reveal">
@@ -797,9 +1461,11 @@
                     <h3>Performance Optimization</h3>
                     <p>Unity Profiler analysis, draw call reduction, object pooling, memory optimization, and APK size
                         reduction.</p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Before/after stats — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">Unity Profiler</span>
+                        <span class="showcase-tag">Draw Call Batching</span>
+                        <span class="showcase-tag">Object Pooling</span>
+                        <span class="showcase-tag">Memory Profiling</span>
                     </div>
                 </div>
                 <div class="showcase-card reveal">
@@ -807,9 +1473,11 @@
                     <h3>Physics Interactions</h3>
                     <p>Rigidbody-based interactions, trigger systems, ragdoll physics, and physics-driven gameplay
                         mechanics.</p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Gameplay demo — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">Rigidbody Physics</span>
+                        <span class="showcase-tag">Trigger Volumes</span>
+                        <span class="showcase-tag">Collision Layers</span>
+                        <span class="showcase-tag">Joint Dynamics</span>
                     </div>
                 </div>
                 <div class="showcase-card reveal">
@@ -817,9 +1485,11 @@
                     <h3>Game Systems</h3>
                     <p>Progression systems, save/load, economy design, reward mechanics, and event-driven architecture.
                     </p>
-                    <div class="showcase-placeholder">
-                        <i class="fas fa-film"></i>
-                        <span>Architecture breakdown — coming soon</span>
+                    <div class="showcase-tags">
+                        <span class="showcase-tag">Scriptable Objects</span>
+                        <span class="showcase-tag">Event Architecture</span>
+                        <span class="showcase-tag">JSON / ES3 Saves</span>
+                        <span class="showcase-tag">Economy Systems</span>
                     </div>
                 </div>
             </div>
@@ -868,6 +1538,13 @@
                         </div>
                     </div>
                     <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+919054180748" class="contact-link">+91 90541 80748</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
                         <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Location</h4>
@@ -882,14 +1559,6 @@
                                 rel="noopener noreferrer" class="contact-link">Brijesh Parmar</a>
                         </div>
                     </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fab fa-github"></i></div>
-                        <div>
-                            <h4>GitHub</h4>
-                            <a href="https://github.com/BrijeshParmar-com" target="_blank" rel="noopener noreferrer"
-                                class="contact-link">BrijeshParmar-com</a>
-                        </div>
-                    </div>
                 </div>
                 <div class="contact-form-wrapper reveal">
                     <form class="contact-form" action="/" method="POST" data-netlify="true" name="contact"
@@ -900,25 +1569,25 @@
                         </p>
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="Name" class="form-input" placeholder="Your name"
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name"
                                 required>
                             <span class="form-error">Please enter your name</span>
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="Email" class="form-input" placeholder="your@email.com"
+                            <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com"
                                 required>
                             <span class="form-error">Please enter a valid email address</span>
                         </div>
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="Subject" class="form-input"
+                            <input type="text" id="subject" name="subject" class="form-input"
                                 placeholder="What's this about?" required>
                             <span class="form-error">Please enter a subject</span>
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="Message" class="form-input form-textarea"
+                            <textarea id="message" name="message" class="form-input form-textarea"
                                 placeholder="Tell me about your project or idea..." rows="5" required></textarea>
                             <span class="form-error">Please enter your message</span>
                         </div>
@@ -948,13 +1617,16 @@
                         rel="noopener noreferrer" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/BrijeshParmar-com" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub">
-                        <i class="fab fa-github"></i>
+                    <a href="https://www.facebook.com/brijesh.parmar.60368" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com/_.brijesh._.6969._/" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.instagram.com/_brijesh.parmar_/" target="_blank" rel="noopener noreferrer"
                         aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="tel:+919054180748" aria-label="Phone">
+                        <i class="fas fa-phone-alt"></i>
                     </a>
                     <a href="mailto:parmarbrijesh2054@gmail.com" aria-label="Email">
                         <i class="fas fa-envelope"></i>

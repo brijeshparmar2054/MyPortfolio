@@ -577,9 +577,103 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ============================================================
+  // 15. Hero Live Showcase Auto-Cycle Controller
+  // ============================================================
+  function initHeroLiveStream() {
+    const previewCard = document.getElementById("heroEnginePreview");
+    if (!previewCard) return;
+
+    const slides = previewCard.querySelectorAll(".engine-slide");
+    const indicators = previewCard.querySelectorAll(".reel-indicator");
+    const progressBar = document.getElementById("streamProgressBar");
+    const sceneNameEl = previewCard.querySelector(".engine-scene-name");
+    const activeGenreEl = document.getElementById("activeGameGenre");
+    const activeTitleEl = document.getElementById("activeGameTitle");
+    const activeStoreBtn = document.getElementById("activeStoreBtn");
+    const timelineCounter = document.getElementById("timelineCounter");
+    const tech1El = document.getElementById("footerTech1");
+    const tech2El = document.getElementById("footerTech2");
+    const tech3El = document.getElementById("footerTech3");
+
+    if (slides.length === 0) return;
+
+    const SLIDE_DURATION = 3800; // 3.8s per live game
+    let currentIndex = 0;
+    let cycleTimer = null;
+
+    // Switch to Slide
+    function goToSlide(index) {
+      if (index < 0 || index >= slides.length) return;
+      currentIndex = index;
+
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add("active");
+        } else {
+          slide.classList.remove("active");
+        }
+      });
+
+      indicators.forEach((ind, i) => {
+        if (i === index) {
+          ind.classList.add("active");
+        } else {
+          ind.classList.remove("active");
+        }
+      });
+
+      const currentSlide = slides[index];
+      if (currentSlide) {
+        if (sceneNameEl) sceneNameEl.textContent = currentSlide.dataset.scene || "Arena.unity";
+        if (activeGenreEl) activeGenreEl.textContent = currentSlide.dataset.genre || "Unity Game";
+        if (activeTitleEl) activeTitleEl.textContent = currentSlide.dataset.title || "Game Title";
+        if (activeStoreBtn) activeStoreBtn.href = currentSlide.dataset.link || "#";
+        if (timelineCounter) timelineCounter.textContent = `0${index + 1} / 0${slides.length}`;
+        if (tech1El) tech1El.innerHTML = currentSlide.dataset.tech1 || "C# Architecture";
+        if (tech2El) tech2El.innerHTML = currentSlide.dataset.tech2 || "Gameplay Systems";
+        if (tech3El) tech3El.innerHTML = currentSlide.dataset.tech3 || "Low-End Optimized";
+      }
+
+      resetProgress();
+    }
+
+    // Progress Bar Animation
+    function resetProgress() {
+      if (!progressBar) return;
+      progressBar.style.transition = "none";
+      progressBar.style.width = "0%";
+      void progressBar.offsetWidth; // Force reflow
+      if (!prefersReducedMotion) {
+        progressBar.style.transition = `width ${SLIDE_DURATION}ms linear`;
+        progressBar.style.width = "100%";
+      }
+    }
+
+    // Next Slide
+    function nextSlide() {
+      const next = (currentIndex + 1) % slides.length;
+      goToSlide(next);
+    }
+
+    // Start auto cycle
+    function startCycle() {
+      if (cycleTimer) clearInterval(cycleTimer);
+      if (prefersReducedMotion) return;
+      resetProgress();
+      cycleTimer = setInterval(() => {
+        nextSlide();
+      }, SLIDE_DURATION);
+    }
+
+    // Purely automatic cycle (no manual click handlers, automatically rotates)
+    startCycle();
+  }
+
+  // ============================================================
   // Initial Calls
   // ============================================================
   handleNavbarScroll();
   handleActiveSectionHighlight();
   handleBackToTopVisibility();
+  initHeroLiveStream();
 });
