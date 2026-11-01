@@ -1899,6 +1899,9 @@ input, textarea, select {
 .more-projects-section {
   padding-top: 70px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 .more-projects-header {
@@ -3060,6 +3063,19 @@ input, textarea, select {
     gap: 40px;
   }
 
+  /* More Projects 768px */
+  .more-projects-section {
+    padding-top: 50px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .project-filters {
     gap: 8px;
   }
@@ -3239,8 +3255,23 @@ input, textarea, select {
     text-align: left;
   }
 
+  .more-projects-section {
+    padding-top: 40px;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .project-card-small {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
   }
 
   .project-filters {
