@@ -271,8 +271,8 @@ input, textarea, select {
   white-space: nowrap;
 }
 
-/* Scrolled state: Reveal UNITY GAME DEVELOPER under Brijesh Parmar */
-.navbar.scrolled .nav-logo-role {
+/* Reveal UNITY GAME DEVELOPER only when home section is NOT visible */
+.navbar.show-brand-role .nav-logo-role {
   max-height: 18px;
   opacity: 1;
   transform: translateY(0);

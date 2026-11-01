@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ).matches;
 
   // ============================================================
-  // 1. Navbar Scroll Effect
+  // 1. Navbar Scroll Effect & Brand Visibility
   // ============================================================
   const navbar = document.querySelector(".navbar");
+  const homeSection = document.getElementById("home");
   let scrollTicking = false;
 
   function onScroll() {
@@ -28,10 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleNavbarScroll() {
     if (!navbar) return;
+
+    // Navbar background blur/border on scroll
     if (window.scrollY > 40) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
+    }
+
+    // Role text: Hidden when home section is visible, visible on all other sections
+    if (homeSection) {
+      const homeRect = homeSection.getBoundingClientRect();
+      const isHomeVisible = homeRect.bottom > 80;
+      if (isHomeVisible) {
+        navbar.classList.remove("show-brand-role");
+      } else {
+        navbar.classList.add("show-brand-role");
+      }
     }
   }
 
