@@ -684,10 +684,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ============================================================
+  // 16. Theme Toggle (Light & Dark Mode)
+  // ============================================================
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+
+  function getActiveTheme() {
+    return document.documentElement.getAttribute("data-theme") || "dark";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("portfolio-theme", theme);
+    } catch {
+      // Storage unavailable fallback
+    }
+
+    if (themeToggleBtn) {
+      const isLight = theme === "light";
+      themeToggleBtn.setAttribute(
+        "aria-label",
+        isLight ? "Switch to dark theme" : "Switch to light theme"
+      );
+      themeToggleBtn.setAttribute(
+        "title",
+        isLight ? "Switch to Dark Mode" : "Switch to Light Mode"
+      );
+    }
+  }
+
+  themeToggleBtn?.addEventListener("click", () => {
+    const currentTheme = getActiveTheme();
+    const targetTheme = currentTheme === "light" ? "dark" : "light";
+    applyTheme(targetTheme);
+  });
+
+  // ============================================================
   // Initial Calls
   // ============================================================
   handleNavbarScroll();
   handleActiveSectionHighlight();
   handleBackToTopVisibility();
   initHeroLiveStream();
+  applyTheme(getActiveTheme());
 });
