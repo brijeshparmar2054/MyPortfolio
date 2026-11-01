@@ -194,6 +194,8 @@ input, textarea, select {
 
 .navbar.scrolled {
   background: rgba(10, 10, 15, 0.95);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar .container {
@@ -209,13 +211,16 @@ input, textarea, select {
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-logo:hover {
+  opacity: 0.95;
 }
 
 .nav-logo-mark {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: var(--bg-primary);
+  font-size: 1.15rem;
+  color: #08090f;
   background: var(--accent-green);
   width: 40px;
   height: 40px;
@@ -223,14 +228,63 @@ input, textarea, select {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  letter-spacing: -0.5px;
+  box-shadow: 0 0 16px rgba(0, 255, 136, 0.28);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.nav-logo:hover .nav-logo-mark {
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 0 24px rgba(0, 255, 136, 0.5);
+}
+
+.nav-logo-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav-logo-text {
+  font-family: var(--font-heading);
   font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-white);
+  font-weight: 800;
+  color: #ffffff;
   letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.nav-logo-role {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: var(--accent-green);
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.45);
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-4px);
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Scrolled state: Reveal UNITY GAME DEVELOPER under Brijesh Parmar */
+.navbar.scrolled .nav-logo-role {
+  max-height: 18px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 3px;
+}
+
+/* Footer brand: always display subtitle */
+.footer-brand .nav-logo-role {
+  max-height: none;
+  opacity: 1;
+  transform: none;
+  margin-top: 3px;
 }
 
 /* Nav Links */
@@ -3136,6 +3190,21 @@ input, textarea, select {
 
   .container {
     padding: 0 16px;
+  }
+
+  .nav-logo-mark {
+    width: 36px;
+    height: 36px;
+    font-size: 1.05rem;
+  }
+
+  .nav-logo-text {
+    font-size: 0.96rem;
+  }
+
+  .nav-logo-role {
+    font-size: 0.52rem;
+    letter-spacing: 1.6px;
   }
 
   .hero {

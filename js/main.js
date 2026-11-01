@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleNavbarScroll() {
     if (!navbar) return;
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
